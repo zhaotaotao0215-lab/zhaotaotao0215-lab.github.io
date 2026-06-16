@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page">
+    <main class="shell">
       <aside class="profile" aria-label="个人信息">
         <img class="avatar" src="assets/avatar.png" alt="赵涛涛头像" />
         <p class="eyebrow">Resume</p>
         <h1>赵涛涛</h1>
-        <p class="role">系统科学硕士研究生</p>
+        <p class="role">青岛大学 · 系统科学硕士研究生</p>
         <p class="summary">
-          目前在青岛大学系统科学方向学习，关注多智能体系统、博弈控制与分组编队问题。
+          关注多智能体系统、博弈控制、精确可控性与分组编队问题。简历按时间倒序整理，最近研究放在前面。
         </p>
 
         <section class="side-block">
@@ -40,122 +40,155 @@
         </section>
       </aside>
 
-      <section class="content" aria-label="简历内容">
-        <section class="intro section">
-          <p class="eyebrow">About</p>
-          <h2>个人简介</h2>
-          <p>
-            本科就读于阜阳师范大学数学与统计学院，2025 年起在青岛大学攻读系统科学硕士。当前主要围绕多智能体系统中的博弈控制、精确可控性和分组编队开展学习与研究。
-          </p>
-        </section>
+      <section class="workspace" aria-label="简历内容">
+        <header class="toolbar">
+          <div>
+            <p class="eyebrow">Timeline</p>
+            <h2>时间线</h2>
+          </div>
+          <input class="search-input" type="search" placeholder="搜索论文、经历或关键词" aria-label="搜索简历内容" />
+        </header>
 
-        <section class="section">
-          <p class="eyebrow">Research</p>
-          <h2>研究与论文</h2>
-          <div class="timeline">
-            <article class="entry">
+        <nav class="filters" aria-label="筛选时间线">
+          <button class="filter active" type="button" data-filter="all">全部</button>
+          <button class="filter" type="button" data-filter="research">研究论文</button>
+          <button class="filter" type="button" data-filter="education">教育经历</button>
+          <button class="filter" type="button" data-filter="honor">奖学金</button>
+        </nav>
+
+        <div class="result-count" aria-live="polite">显示 9 条记录</div>
+
+        <section class="timeline">
+          <details class="entry" open data-type="research" data-keywords="控制与决策 分层博弈 二阶 多智能体 分组编队">
+            <summary>
               <time>2026.06</time>
-              <div>
-                <h3>基于分层博弈的二阶多智能体系统分组编队</h3>
-                <p class="meta">赵涛涛, 赵兰浩, 纪志坚, 谭琳蓉, 李基贺 · 《控制与决策》, 2026</p>
-                <p>研究二阶多智能体系统的分组编队、状态掩蔽与模板重构问题。</p>
-              </div>
-            </article>
+              <span class="entry-main">
+                <strong>基于分层博弈的二阶多智能体系统分组编队</strong>
+                <span>《控制与决策》</span>
+              </span>
+            </summary>
+            <div class="entry-body">
+              <p class="meta">赵涛涛, 赵兰浩, 纪志坚, 谭琳蓉, 李基贺 · 《控制与决策》, 2026</p>
+              <p>研究二阶多智能体系统的分组编队、状态掩蔽与模板重构问题。</p>
+            </div>
+          </details>
 
-            <article class="entry">
+          <details class="entry" data-type="research" data-keywords="CCDC exact controllability game-based multi-agent D-SEP">
+            <summary>
               <time>2026.05</time>
-              <div>
-                <h3>
-                  <a href="https://cmsweb.com.sg/rps2prod/ccdc2026/epro/html/SunCIS-31.html" target="_blank" rel="noreferrer">
-                    Exact Controllability of Game-Based Multi-Agent Systems: A Dynamic Strategy Equivalence Partitioning Approach
-                  </a>
-                </h3>
-                <p class="meta">Taotao ZHAO, Zhijian JI · CCDC 2026, pp. 3361-3366</p>
-                <p>围绕博弈型多智能体系统的精确可控性，讨论动态策略等价划分方法。</p>
-              </div>
-            </article>
+              <span class="entry-main">
+                <strong>Exact Controllability of Game-Based Multi-Agent Systems</strong>
+                <span>CCDC 2026</span>
+              </span>
+            </summary>
+            <div class="entry-body">
+              <p class="meta">Taotao ZHAO, Zhijian JI · CCDC 2026, pp. 3361-3366</p>
+              <p>围绕博弈型多智能体系统的精确可控性，讨论动态策略等价划分方法。</p>
+              <a href="https://cmsweb.com.sg/rps2prod/ccdc2026/epro/html/SunCIS-31.html" target="_blank" rel="noreferrer">会议论文页</a>
+            </div>
+          </details>
 
-            <article class="entry">
+          <details class="entry" data-type="research" data-keywords="最大似然估计 最大后验估计 ChatGPT 大语言模型 青岛大学自动化学院">
+            <summary>
               <time>2026.03</time>
-              <div>
-                <h3>
-                  <a href="https://cnki.istiz.org.cn/kcms/detail/detail.aspx?filename=DNZS202603010&dbcode=CJFQ&dbname=CJFD2026" target="_blank" rel="noreferrer">
-                    最大似然估计(MLE)和最大后验估计(MAP)在ChatGPT中的应用研究
-                  </a>
-                </h3>
-                <p class="meta">赵涛涛 · 青岛大学自动化学院 · 《电脑知识与技术》, 2026 年 03 期</p>
-                <p>从统计推断视角整理 MLE 与 MAP 在大型语言模型训练过程中的作用。</p>
-              </div>
-            </article>
+              <span class="entry-main">
+                <strong>最大似然估计(MLE)和最大后验估计(MAP)在ChatGPT中的应用研究</strong>
+                <span>《电脑知识与技术》</span>
+              </span>
+            </summary>
+            <div class="entry-body">
+              <p class="meta">赵涛涛 · 青岛大学自动化学院 · 《电脑知识与技术》, 2026 年 03 期</p>
+              <p>从统计推断视角整理 MLE 与 MAP 在大型语言模型训练过程中的作用。</p>
+              <a href="https://cnki.istiz.org.cn/kcms/detail/detail.aspx?filename=DNZS202603010&dbcode=CJFQ&dbname=CJFD2026" target="_blank" rel="noreferrer">知网页</a>
+            </div>
+          </details>
 
-            <article class="entry">
+          <details class="entry" data-type="research" data-keywords="最大后验概率估计 大语言模型 贝叶斯推断 青岛大学系统科学研究院">
+            <summary>
               <time>2026.01</time>
-              <div>
-                <h3>
-                  <a href="https://cnki.istiz.org.cn/kcms/detail/detail.aspx?filename=JZSB202601018&dbcode=CJFQ&dbname=CJFD2026" target="_blank" rel="noreferrer">
-                    基于最大后验概率估计在大语言模型中的应用研究
-                  </a>
-                </h3>
-                <p class="meta">赵涛涛 · 青岛大学系统科学研究院 · 《焦作师范高等专科学校学报》, 2026 年 01 期</p>
-                <p>围绕 MAP 估计、贝叶斯推断与动态先验，讨论大语言模型推理优化。</p>
-              </div>
-            </article>
+              <span class="entry-main">
+                <strong>基于最大后验概率估计在大语言模型中的应用研究</strong>
+                <span>《焦作师范高等专科学校学报》</span>
+              </span>
+            </summary>
+            <div class="entry-body">
+              <p class="meta">赵涛涛 · 青岛大学系统科学研究院 · 《焦作师范高等专科学校学报》, 2026 年 01 期</p>
+              <p>围绕 MAP 估计、贝叶斯推断与动态先验，讨论大语言模型推理优化。</p>
+              <a href="https://cnki.istiz.org.cn/kcms/detail/detail.aspx?filename=JZSB202601018&dbcode=CJFQ&dbname=CJFD2026" target="_blank" rel="noreferrer">知网页</a>
+            </div>
+          </details>
 
-            <article class="entry">
-              <time>2024</time>
-              <div>
-                <h3>
-                  <a href="https://dianda.cqvip.com/Qikan/Article/Detail?id=7111775255" target="_blank" rel="noreferrer">
-                    二面体群 D3 的同构--从一个误解说起
-                  </a>
-                </h3>
-                <p class="meta">林记, 赵涛涛, 梅金金 · 《红河学院学报》, 2024, 22(2): 127-128</p>
-                <p>第二作者，主题涉及抽象代数中二面体群同构问题的辨析。</p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <p class="eyebrow">Education</p>
-          <h2>教育与经历</h2>
-          <div class="timeline">
-            <article class="entry">
-              <time>2025 - 至今</time>
-              <div>
-                <h3>青岛大学 · 系统科学</h3>
-                <p class="meta">硕士研究生</p>
-                <p>研究方向为多智能体系统、博弈控制与协同控制。</p>
-              </div>
-            </article>
-
-            <article class="entry">
+          <details class="entry" data-type="honor" data-keywords="青岛大学 新生奖学金 6000 奖学金">
+            <summary>
               <time>2025.10</time>
-              <div>
-                <h3>青岛大学新生奖学金</h3>
-                <p>研究生入学后获得新生奖学金。</p>
-              </div>
-            </article>
+              <span class="entry-main">
+                <strong>青岛大学新生奖学金</strong>
+                <span>6000 元</span>
+              </span>
+            </summary>
+            <div class="entry-body">
+              <p>研究生入学后获得新生奖学金，金额 6000 元。</p>
+            </div>
+          </details>
 
-            <article class="entry">
-              <time>大三时期</time>
-              <div>
-                <h3>大学生创新创业训练计划省级项目</h3>
-                <p class="meta">第一负责人，项目经费 5000 元</p>
-                <p>在阜阳师范大学数学与统计学院学习期间，参与项目申报、推进和材料整理。</p>
-              </div>
-            </article>
+          <details class="entry" data-type="education" data-keywords="青岛大学 系统科学 硕士研究生 自动化学院">
+            <summary>
+              <time>2025 - 至今</time>
+              <span class="entry-main">
+                <strong>青岛大学 · 系统科学</strong>
+                <span>硕士研究生</span>
+              </span>
+            </summary>
+            <div class="entry-body">
+              <p>研究方向为多智能体系统、博弈控制与协同控制。</p>
+            </div>
+          </details>
 
-            <article class="entry">
+          <details class="entry" data-type="research" data-keywords="红河学院学报 二面体群 D3 同构 抽象代数">
+            <summary>
+              <time>2024</time>
+              <span class="entry-main">
+                <strong>二面体群 D3 的同构--从一个误解说起</strong>
+                <span>《红河学院学报》</span>
+              </span>
+            </summary>
+            <div class="entry-body">
+              <p class="meta">林记, 赵涛涛, 梅金金 · 《红河学院学报》, 2024, 22(2): 127-128</p>
+              <p>第二作者，主题涉及抽象代数中二面体群同构问题的辨析。</p>
+              <a href="https://dianda.cqvip.com/Qikan/Article/Detail?id=7111775255" target="_blank" rel="noreferrer">维普页</a>
+            </div>
+          </details>
+
+          <details class="entry" data-type="education" data-keywords="大学生创新创业训练计划 省级项目 第一负责人 5000 大三">
+            <summary>
+              <time>2023 - 2024</time>
+              <span class="entry-main">
+                <strong>大学生创新创业训练计划省级项目</strong>
+                <span>大三时期 · 第一负责人</span>
+              </span>
+            </summary>
+            <div class="entry-body">
+              <p class="meta">项目经费 5000 元</p>
+              <p>在阜阳师范大学数学与统计学院学习期间，参与项目申报、推进和材料整理。</p>
+            </div>
+          </details>
+
+          <details class="entry" data-type="education" data-keywords="阜阳师范大学 数学与统计学院 本科">
+            <summary>
               <time>2021 - 2025</time>
-              <div>
-                <h3>阜阳师范大学 · 数学与统计学院</h3>
-                <p>本科阶段学习数学与统计相关课程。</p>
-              </div>
-            </article>
-          </div>
+              <span class="entry-main">
+                <strong>阜阳师范大学 · 数学与统计学院</strong>
+                <span>本科</span>
+              </span>
+            </summary>
+            <div class="entry-body">
+              <p>本科阶段学习数学与统计相关课程。</p>
+            </div>
+          </details>
         </section>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
