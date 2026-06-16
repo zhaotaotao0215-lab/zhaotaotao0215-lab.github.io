@@ -1,12 +1,12 @@
 # GitHub Resume
 
-这是一个可以直接发布到 GitHub Pages 的交互式个人简历网页。
+这是一个可以直接发布到 GitHub Pages 的静态个人简历网页。
 
 ## 使用方式
 
 1. 如需继续修改简历内容，编辑 `index.html`。
 2. 如需继续更换头像，替换 `assets/avatar.png`，并保持文件名不变；也可以在 `index.html` 中改成你的图片路径。
-3. `styles.css` 控制页面样式，`script.js` 控制标签页、筛选、搜索和深色模式。
+3. `styles.css` 控制页面样式。
 4. 在 GitHub 新建一个仓库：
    - 如果想作为个人主页，仓库名用 `你的GitHub用户名.github.io`。
    - 如果想作为项目页面，仓库名可以用 `resume`、`cv` 等。
@@ -37,7 +37,6 @@ https://你的GitHub用户名.github.io/仓库名/
 github-resume/
   index.html
   styles.css
-  script.js
   assets/
     avatar.png
   .nojekyll
