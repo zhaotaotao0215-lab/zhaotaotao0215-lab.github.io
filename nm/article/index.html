@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>网贷避坑指南</title>
+  <style>
+    :root {
+      --ink: #202124;
+      --muted: #69757c;
+      --green: #2f5d50;
+      --brown: #6b432c;
+      --cream: #fff8ef;
+      --gold: #f1d19b;
+      --line: #eadcc9;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f3eee8;
+      color: var(--ink);
+    }
+    .progress {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 4px;
+      width: 0;
+      background: var(--green);
+      z-index: 10;
+    }
+    article {
+      width: min(100vw, 430px);
+      margin: 0 auto;
+      background: #fffdfa;
+      min-height: 100vh;
+      padding: 22px 20px 42px;
+    }
+    .account {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      color: var(--brown);
+      font-size: 29px;
+      line-height: 1.22;
+      letter-spacing: 0;
+      margin: 8px 0 10px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+    .hero {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      margin: 12px 0 18px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.82;
+      margin: 0 0 16px;
+    }
+    h2 {
+      margin: 28px 0 10px;
+      color: var(--green);
+      font-size: 22px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+    blockquote {
+      margin: 18px 0;
+      padding: 14px 16px;
+      border-left: 5px solid var(--green);
+      background: #eaf4ee;
+      color: var(--green);
+      font-weight: 800;
+      line-height: 1.7;
+    }
+    .divider {
+      height: 4px;
+      width: 54px;
+      background: var(--gold);
+      border-radius: 99px;
+      margin: 10px 0 18px;
+    }
+    .note {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      margin: 18px 0;
+      color: var(--brown);
+      font-weight: 700;
+      line-height: 1.7;
+    }
+    ol {
+      padding-left: 1.4em;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+    li { margin: 8px 0; }
+    .poll {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fffaf3;
+      margin: 24px 0;
+    }
+    .poll h3 {
+      margin: 0 0 12px;
+      color: var(--brown);
+      font-size: 17px;
+    }
+    .option {
+      width: 100%;
+      border: 1px solid #e2c99e;
+      background: white;
+      color: var(--brown);
+      border-radius: 8px;
+      padding: 12px;
+      margin: 8px 0;
+      text-align: left;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .barWrap {
+      display: none;
+      margin-top: 7px;
+      height: 8px;
+      background: #efe3d4;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .bar { height: 100%; background: var(--green); width: 0; }
+    .show .barWrap { display: block; }
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 26px;
+    }
+    .action {
+      border: 0;
+      border-radius: 8px;
+      padding: 13px 10px;
+      font-size: 16px;
+      font-weight: 800;
+      color: white;
+      background: var(--green);
+      cursor: pointer;
+    }
+    .action.secondary { background: var(--brown); }
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 22px;
+      transform: translateX(-50%);
+      background: rgba(32, 33, 36, .92);
+      color: white;
+      padding: 10px 13px;
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity .2s ease;
+      font-size: 14px;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; }
+    .source {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      margin-top: 26px;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress" class="progress"></div>
+  <article>
+    <div class="account">金融科技小课堂 · 原创科普</div>
+    <h1>网贷避坑指南：这 3 个利率陷阱，别等还款日才看懂</h1>
+    <div class="meta">2026-06-29 · 面向普通消费者的金融风险教育</div>
+    <img class="hero" src="../assets/article_header.png" alt="网贷避坑指南头图">
+
+    <p>同样借 3000 元，有人看到“日息低至几毛钱”就点了同意；等到账单出来，才发现手续费、服务费、逾期费把总成本推高了。</p>
+    <p>网贷最容易让人误判的地方，不是字太小，而是你只看了一个数字。</p>
+
+    <blockquote>借钱之前，请先看三个数：年化利率、总还款金额、逾期成本。</blockquote>
+
+    <h2>01 只看日息，不看年化</h2>
+    <div class="divider"></div>
+    <p>“日利率万五”听起来很低，按单利粗算年化约 18.25%。如果平台还叠加手续费、担保费，真实成本可能继续上升。</p>
+    <p>判断贵不贵，先问一句：它有没有清楚展示年化利率？年化利率像统一尺子，可以把不同贷款产品放在一起比较。</p>
+
+    <div class="note">看小字：服务费、担保费、提前还款费都要算进总成本。</div>
+
+    <h2>02 把“分期手续费”当成免费</h2>
+    <div class="divider"></div>
+    <p>有些产品写着“0 利息”，但每期收手续费。对借款人来说，真正付出的成本不是“利息”两个字，而是实际到账多少钱、每期还多少钱、总共还多少期。</p>
+    <p>一个简单办法：不要只看月供是否能承受，还要把所有期数加起来，算出总还款金额，再和实际到账金额比较。</p>
+
+    <h2>03 借新还旧，账单滚雪球</h2>
+    <div class="divider"></div>
+    <p>短期周转如果靠下一笔贷款补上一笔，很容易进入“越还越缺”的循环。逾期后还可能产生罚息、催收压力，并影响后续信用记录。</p>
+    <p>借款不是收入，它只是把未来的钱提前拿来用。越是急着点“立即放款”，越要停下来把成本看完整。</p>
+
+    <h2>借之前，先问自己 4 个问题</h2>
+    <ol>
+      <li>平台是否明示年化利率？</li>
+      <li>实际到账金额和总还款金额分别是多少？</li>
+      <li>提前还款、逾期还款是否收费？</li>
+      <li>这笔钱是否真的必须现在借？</li>
+    </ol>
+    <p>如果四个问题里有两个答不上来，建议先别点确认。</p>
+
+    <section class="poll" id="poll">
+      <h3>互动投票：借款前你最先看哪个数字？</h3>
+      <button class="option" data-score="48">年化利率 <div class="barWrap"><div class="bar"></div></div></button>
+      <button class="option" data-score="34">每月还款额 <div class="barWrap"><div class="bar"></div></div></button>
+      <button class="option" data-score="18">到账速度 <div class="barWrap"><div class="bar"></div></div></button>
+    </section>
+
+    <h2>最后提醒</h2>
+    <p>理性借贷的重点不是“永远不借”，而是不要在没看懂成本的时候借。尤其不要用贷款投资，不要用贷款还贷款，也不要相信“无门槛、高额度、秒到账”的夸张宣传。</p>
+    <div class="note">你看到过最容易误解的借款广告词是什么？欢迎留言。也可以把这篇转给正在考虑分期消费的朋友，借钱前多看一分钟，可能少踩一个坑。</div>
+
+    <div class="actions">
+      <button class="action" onclick="like()">在看 <span id="likeCount">0</span></button>
+      <button class="action secondary" onclick="copyTitle()">复制标题</button>
+    </div>
+
+    <div class="source">
+      资料来源：中国人民银行关于明示贷款年化利率的公开要求；最高人民法院关于民间借贷利率司法保护上限的公开信息。本文仅作金融知识科普，不构成借贷建议。
+    </div>
+  </article>
+  <div id="toast" class="toast">已操作</div>
+  <script>
+    const progress = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, scrollY / max) * 100}%`;
+    });
+    document.querySelectorAll('.option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('poll').classList.add('show');
+        document.querySelectorAll('.option').forEach(item => {
+          item.querySelector('.bar').style.width = `${item.dataset.score}%`;
+          if (!item.textContent.includes('%')) {
+            item.childNodes[0].textContent = `${item.childNodes[0].textContent.trim()} · ${item.dataset.score}% `;
+          }
+        });
+        toast('已投票，结果已展示');
+      });
+    });
+    function like() {
+      const key = 'loanArticleLikes';
+      const count = Number(localStorage.getItem(key) || '0') + 1;
+      localStorage.setItem(key, count);
+      document.getElementById('likeCount').textContent = count;
+      toast('已点在看');
+    }
+    function copyTitle() {
+      navigator.clipboard?.writeText(document.title);
+      toast('标题已复制');
+    }
+    function toast(text) {
+      const el = document.getElementById('toast');
+      el.textContent = text;
+      el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), 1400);
+    }
+    document.getElementById('likeCount').textContent = localStorage.getItem('loanArticleLikes') || '0';
+    if (new URLSearchParams(location.search).get('demo') === 'poll') {
+      document.getElementById('poll').classList.add('show');
+      document.querySelectorAll('.option').forEach(item => {
+        item.querySelector('.bar').style.width = `${item.dataset.score}%`;
+        item.childNodes[0].textContent = `${item.childNodes[0].textContent.trim()} · ${item.dataset.score}% `;
+      });
+      setTimeout(() => document.getElementById('poll').scrollIntoView({ block: 'center' }), 200);
+    }
+  </script>
+</body>
+</html>
