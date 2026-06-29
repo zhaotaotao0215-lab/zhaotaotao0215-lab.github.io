@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>金融科技科普作品集</title>
+  <style>
+    :root {
+      --ink: #123a4a;
+      --muted: #60757d;
+      --green: #0b6b55;
+      --mint: #e8f5ef;
+      --blue: #eaf4ff;
+      --gold: #ffd166;
+      --line: #d8e4e6;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f8fffb 0%, #eef7ff 100%);
+      min-height: 100vh;
+    }
+    main {
+      width: min(100%, 960px);
+      margin: 0 auto;
+      padding: 32px 18px 44px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: center;
+      background: var(--mint);
+      border-radius: 8px;
+      padding: 34px;
+      border: 1px solid rgba(11, 107, 85, .12);
+    }
+    h1 {
+      margin: 8px 0 12px;
+      font-size: clamp(34px, 7vw, 62px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    .eyebrow {
+      color: var(--green);
+      font-weight: 800;
+      font-size: 15px;
+    }
+    p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 17px;
+      margin: 0 0 16px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 16px 36px rgba(18, 58, 74, .12);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(18, 58, 74, .07);
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 18px;
+    }
+    .pill {
+      background: #fff1c7;
+      color: #765400;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    a.button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 46px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      width: 100%;
+    }
+    .secondary {
+      background: #123a4a !important;
+    }
+    .footer {
+      margin-top: 20px;
+      padding: 18px 2px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    @media (max-width: 760px) {
+      .hero, .cards { grid-template-columns: 1fr; }
+      .hero { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">《移动新媒体营销与推广》期末作品集</div>
+        <h1>金融科技科普与风险教育</h1>
+        <p>这个入口页包含两个可操作作品：一个移动支付安全 H5，一个网贷利率避坑公众号推文页。手机端打开后可点击、滑动、答题和投票。</p>
+        <div class="meta">
+          <span class="pill">H5 交互</span>
+          <span class="pill">公众号推文</span>
+          <span class="pill">金融风险提示</span>
+        </div>
+      </div>
+      <img src="assets/mobile_payment_hero.png" alt="付款码安全主视觉">
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h2>作品一：H5 页面</h2>
+        <p>《付款码别裸奔：移动支付安全 5 分钟自查》包含点击弹出、免密额度滑块、安全答题、止损步骤和保存清单。</p>
+        <a class="button" href="h5/">打开 H5 页面</a>
+      </article>
+      <article class="card">
+        <h2>作品二：公众号推文</h2>
+        <p>《网贷避坑指南：这 3 个利率陷阱，别等还款日才看懂》包含图文排版、引用提示、行动清单、投票和互动引导。</p>
+        <a class="button secondary" href="article/">打开推文页面</a>
+      </article>
+    </section>
+
+    <div class="footer">
+      本作品集已部署为公开静态网页，可直接扫码访问。H5 与公众号推文页均支持手机端操作。
+    </div>
+  </main>
+</body>
+</html>
