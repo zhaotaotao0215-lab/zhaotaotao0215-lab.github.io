@@ -128,6 +128,11 @@ h2 {
   color: var(--muted);
 }
 
+.paper-link {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
 .summary {
   margin-bottom: 0;
 }
