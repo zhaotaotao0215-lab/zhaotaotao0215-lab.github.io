@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zhaotaotao0215-lab.github.io/sitemap.xml

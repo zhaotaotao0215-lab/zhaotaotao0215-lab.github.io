@@ -25,19 +25,23 @@ Taotao Zhao, Zhijian Ji, Lanhao Zhao, Linrong Tan,
 
 ## 页面内容
 
-- 研究论文
-- 项目经历
+- 个人简介与研究方向
+- 研究论文与期刊/会议筛选
 - 教育经历
-- 奖学金
+- 奖项与项目
+- 深色/浅色主题切换
+- 浏览器打印简历
 
 ## 项目结构
 
 ```text
 .
-├── index.html        # 主页内容、SEO 元信息、简历时间线
+├── index.html        # 主页内容、SEO 元信息、论文与履历区块
 ├── styles.css        # 页面视觉、响应式、打印样式
-├── script.js         # 搜索、筛选、结果计数交互
+├── script.js         # 主题、论文筛选、打印与导航交互
 ├── assets/           # 头像等主页资源
+├── robots.txt        # 搜索引擎抓取规则
+├── sitemap.xml       # 公开主页站点地图
 └── nm/               # 课程/专题页面子目录
 ```
 
@@ -62,16 +66,17 @@ http://127.0.0.1:8765/
 
 ## 内容维护
 
-- 更新研究方向：修改 `index.html` 中侧边栏简介、方向标签和“研究聚焦”文案。
-- 新增论文：在 `.timeline` 中复制一段 `details.entry`，设置 `data-type="research"` 和相关 `data-keywords`。
-- 新增项目、教育或奖项：分别使用 `data-type="project"`、`education`、`honor`。
+- 更新研究方向：修改 `index.html` 中的首屏简介和 `.research-facts`。
+- 新增论文：在 `.publication-list` 中复制一段 `article.publication`，设置 `data-category` 和 `data-publication`。
+- 新增教育、奖项或项目：在对应区块的 `.chronology` 中添加条目。
 - 更新外链：保持 `target="_blank"` 和 `rel="noopener noreferrer"`。
 - 更新头像：替换 `assets/avatar.png`，并确认尺寸与清晰度适合网页和分享预览。
+- 更新颜色：修改 `styles.css` 顶部的深色与浅色主题变量。
 
 ## 维护检查清单
 
 - 公开链接、论文链接和邮箱链接可以正常打开。
-- 搜索框能匹配标题、来源、正文和关键词。
-- 分类筛选按钮的高亮状态与结果数量正确。
-- 手机宽度下头像、姓名、筛选按钮和时间线不挤压。
-- 打印预览背景清晰，搜索和筛选控件不会干扰简历内容。
+- 期刊/会议筛选按钮的状态与论文数量正确。
+- 明暗主题切换后文字、边框和头像均清晰。
+- 手机宽度下头像、姓名、导航和论文标题不挤压。
+- 打印预览为浅色排版，导航和筛选控件不会干扰简历内容。
