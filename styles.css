@@ -331,6 +331,16 @@ svg {
   line-height: 1.3;
 }
 
+.prologue-quote {
+  grid-column: 2;
+}
+
+.prologue-quote h2 span {
+  display: block;
+  margin-top: 18px;
+  color: var(--accent-soft);
+}
+
 .prologue div > p {
   max-width: 700px;
   margin: 24px 0 0;
