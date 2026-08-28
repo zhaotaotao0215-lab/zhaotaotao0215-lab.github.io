@@ -641,20 +641,13 @@ blockquote {
   line-height: 1.6;
 }
 
-.paper-feature-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  width: fit-content;
-  margin-top: 12px;
-  color: var(--text);
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
 .paper-feature:hover {
   background: var(--surface-strong);
   border-color: var(--accent);
+}
+
+.paper-feature:hover strong {
+  color: var(--accent);
 }
 
 .paper-feature-primary {
@@ -939,14 +932,7 @@ blockquote {
 }
 
 .papers-heading h2 {
-  margin-top: 14px;
-}
-
-.papers-heading > p:last-child {
-  max-width: 280px;
-  margin: 24px 0 0;
-  color: var(--muted);
-  font-size: 0.86rem;
+  margin-top: 0;
 }
 
 .paper-index {
