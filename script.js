@@ -109,20 +109,20 @@
     broadcastDemo.classList.add("is-active");
 
     const label = broadcastButton.querySelector("span");
-    if (label) label.textContent = "再发一次广播";
-    broadcastStatus.textContent = "同一个信号已经发给整个群体。";
+    if (label) label.textContent = "再喊一声";
+    broadcastStatus.textContent = "山头喊了一声。";
 
     const reducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (reducedMotion) {
-      broadcastStatus.textContent = "群体已经向目标位置靠拢。";
+      broadcastStatus.textContent = "羊群开始往回走了。";
       return;
     }
 
     broadcastTimer = window.setTimeout(() => {
-      broadcastStatus.textContent = "没有逐个指挥，群体仍然向目标位置靠拢。";
+      broadcastStatus.textContent = "没有一只一只地指挥，羊群还是往回走了。";
     }, 2300);
   });
 
