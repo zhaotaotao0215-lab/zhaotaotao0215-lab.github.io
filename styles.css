@@ -273,6 +273,15 @@ svg {
   line-height: 1.8;
 }
 
+.hero-note a {
+  color: var(--hero-text);
+  border-bottom: 1px solid rgba(250, 247, 240, 0.52);
+}
+
+.hero-note a:hover {
+  border-color: var(--hero-text);
+}
+
 .begin-link {
   display: inline-flex;
   align-items: center;
