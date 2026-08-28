@@ -7,7 +7,11 @@
   const chapterLinks = [...document.querySelectorAll("[data-chapter-link]")];
   const broadcastDemo = document.querySelector("#broadcast-demo");
   const broadcastButton = document.querySelector("#broadcast-button");
+  const broadcastPreview = document.querySelector("#broadcast-preview");
   const broadcastStatus = document.querySelector("#broadcast-status");
+  const broadcastSpeech = document.querySelector("#broadcast-speech");
+  const voiceMeterFill = document.querySelector("#voice-meter-fill");
+  const flockCount = document.querySelector("#flock-count");
 
   const createIcons = () => {
     if (window.lucide) {
@@ -100,31 +104,221 @@
 
   window.addEventListener("resize", updateReadingProgress);
 
-  let broadcastTimer;
+  let mediaStream;
+  let audioContext;
+  let analyser;
+  let microphoneSource;
+  let voiceFrame;
+  let listeningTimer;
+  let isListening = false;
+  let peakLevel = 0;
+  let voicedFrames = 0;
+  const arrivalTimers = [];
 
-  broadcastButton?.addEventListener("click", () => {
-    window.clearTimeout(broadcastTimer);
-    broadcastDemo.classList.remove("is-active");
+  const setBroadcastLabel = (text) => {
+    const label = broadcastButton?.querySelector("span");
+    if (label) label.textContent = text;
+  };
+
+  const setVoiceLevel = (level) => {
+    if (!voiceMeterFill) return;
+    voiceMeterFill.style.setProperty(
+      "--voice-level",
+      String(Math.min(1, Math.max(0.04, level))),
+    );
+  };
+
+  const clearArrivalTimers = () => {
+    arrivalTimers.splice(0).forEach((timer) => window.clearTimeout(timer));
+  };
+
+  const resetFlock = () => {
+    clearArrivalTimers();
+    broadcastDemo?.classList.remove("is-active");
+    if (flockCount) flockCount.textContent = "0 / 8";
+  };
+
+  const stopMicrophone = () => {
+    isListening = false;
+    window.cancelAnimationFrame(voiceFrame);
+    window.clearTimeout(listeningTimer);
+    voiceFrame = undefined;
+    listeningTimer = undefined;
+
+    microphoneSource?.disconnect();
+    microphoneSource = undefined;
+    analyser = undefined;
+
+    mediaStream?.getTracks().forEach((track) => track.stop());
+    mediaStream = undefined;
+
+    const contextToClose = audioContext;
+    audioContext = undefined;
+    if (contextToClose && contextToClose.state !== "closed") {
+      contextToClose.close().catch(() => {});
+    }
+
+    broadcastDemo?.classList.remove("is-listening");
+    broadcastButton?.setAttribute("aria-pressed", "false");
+    if (broadcastButton) broadcastButton.disabled = false;
+    if (broadcastPreview) broadcastPreview.disabled = false;
+    setVoiceLevel(0.04);
+  };
+
+  const runBroadcast = (source) => {
+    stopMicrophone();
+    resetFlock();
+    if (!broadcastDemo || !broadcastStatus) return;
+
     void broadcastDemo.offsetWidth;
     broadcastDemo.classList.add("is-active");
-
-    const label = broadcastButton.querySelector("span");
-    if (label) label.textContent = "再喊一声";
-    broadcastStatus.textContent = "山头喊了一声。";
+    if (broadcastSpeech) broadcastSpeech.textContent = "回羊圈啦";
+    setBroadcastLabel("再喊一次");
+    broadcastStatus.textContent =
+      source === "voice"
+        ? "听见了。广播信号发出，羊群开始往羊圈走。"
+        : "演示开始：广播信号发出，羊群开始往羊圈走。";
 
     const reducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
 
     if (reducedMotion) {
-      broadcastStatus.textContent = "羊群开始往回走了。";
+      if (flockCount) flockCount.textContent = "8 / 8";
+      broadcastStatus.textContent = "八只小羊都进羊圈了。";
       return;
     }
 
-    broadcastTimer = window.setTimeout(() => {
-      broadcastStatus.textContent = "没有一只一只地指挥，羊群还是往回走了。";
-    }, 2300);
+    for (let index = 1; index <= 8; index += 1) {
+      const timer = window.setTimeout(
+        () => {
+          if (flockCount) flockCount.textContent = `${index} / 8`;
+          if (index === 8) {
+            broadcastStatus.textContent = "八只小羊都进羊圈了。";
+          }
+        },
+        2050 + (index - 1) * 100,
+      );
+      arrivalTimers.push(timer);
+    }
+  };
+
+  const finishListening = (heardVoice = peakLevel >= 0.028) => {
+    stopMicrophone();
+
+    if (heardVoice) {
+      runBroadcast("voice");
+      return;
+    }
+
+    setBroadcastLabel("再试一次");
+    if (broadcastStatus) {
+      broadcastStatus.textContent = "我没听清，再喊大声一点。";
+    }
+  };
+
+  const startListening = async () => {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    const canUseMicrophone =
+      window.isSecureContext &&
+      navigator.mediaDevices?.getUserMedia &&
+      AudioContextClass;
+
+    if (!canUseMicrophone) {
+      setBroadcastLabel("麦克风不可用");
+      if (broadcastStatus) {
+        broadcastStatus.textContent = "当前浏览器不能使用麦克风，请点播放键查看演示。";
+      }
+      return;
+    }
+
+    resetFlock();
+    peakLevel = 0;
+    voicedFrames = 0;
+    setBroadcastLabel("正在开启");
+    if (broadcastStatus) broadcastStatus.textContent = "正在开启麦克风。";
+    if (broadcastButton) broadcastButton.disabled = true;
+    if (broadcastPreview) broadcastPreview.disabled = true;
+
+    try {
+      mediaStream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          autoGainControl: true,
+          echoCancellation: true,
+          noiseSuppression: true,
+        },
+        video: false,
+      });
+
+      audioContext = new AudioContextClass();
+      await audioContext.resume();
+      analyser = audioContext.createAnalyser();
+      analyser.fftSize = 1024;
+      analyser.smoothingTimeConstant = 0.72;
+      microphoneSource = audioContext.createMediaStreamSource(mediaStream);
+      microphoneSource.connect(analyser);
+
+      const samples = new Float32Array(analyser.fftSize);
+      const startedAt = performance.now();
+      isListening = true;
+      broadcastDemo?.classList.add("is-listening");
+      broadcastButton?.setAttribute("aria-pressed", "true");
+      if (broadcastButton) broadcastButton.disabled = false;
+      if (broadcastPreview) broadcastPreview.disabled = false;
+      setBroadcastLabel("结束喊话");
+      if (broadcastStatus) broadcastStatus.textContent = "正在听。";
+
+      const readVoice = () => {
+        if (!isListening || !analyser) return;
+
+        analyser.getFloatTimeDomainData(samples);
+        let energy = 0;
+        for (const sample of samples) energy += sample * sample;
+        const rms = Math.sqrt(energy / samples.length);
+        peakLevel = Math.max(peakLevel, rms);
+        setVoiceLevel(rms / 0.11);
+
+        if (performance.now() - startedAt > 220 && rms > 0.035) {
+          voicedFrames += 1;
+        } else {
+          voicedFrames = Math.max(0, voicedFrames - 1);
+        }
+
+        if (voicedFrames >= 4) {
+          finishListening(true);
+          return;
+        }
+
+        voiceFrame = window.requestAnimationFrame(readVoice);
+      };
+
+      readVoice();
+      listeningTimer = window.setTimeout(() => finishListening(), 10000);
+    } catch (error) {
+      stopMicrophone();
+      setBroadcastLabel("重试麦克风");
+      if (broadcastStatus) {
+        broadcastStatus.textContent =
+          error?.name === "NotAllowedError"
+            ? "没有获得麦克风权限，请点播放键查看演示。"
+            : "麦克风暂时不可用，请点播放键查看演示。";
+      }
+    }
+  };
+
+  broadcastButton?.addEventListener("click", () => {
+    if (isListening) {
+      finishListening();
+      return;
+    }
+    startListening();
   });
+
+  broadcastPreview?.addEventListener("click", () => {
+    runBroadcast("preview");
+  });
+
+  window.addEventListener("pagehide", stopMicrophone);
 
   renderThemeControl();
   updateReadingProgress();

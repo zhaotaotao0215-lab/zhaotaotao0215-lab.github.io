@@ -49,12 +49,12 @@
         document.documentElement.dataset.theme = "dark";
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=20260828-story" />
+    <link rel="stylesheet" href="styles.css?v=20260828-broadcast" />
     <script
       defer
       src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
     ></script>
-    <script defer src="script.js?v=20260828-story"></script>
+    <script defer src="script.js?v=20260828-broadcast"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -436,31 +436,92 @@
               <div class="broadcast-story" id="broadcast-demo">
                 <div class="broadcast-copy">
                   <p class="section-label">论文里的一个问题</p>
-                  <h3>一个人在山头喊一声，羊能不能乖乖回家？</h3>
+                  <h3>一个人在山头喊一声，羊能不能乖乖回羊圈？</h3>
                   <p>
-                    这篇论文主要讲一种新方法。对于牧羊问题，完完全全只靠一个广播信号行不行？比如一个人站在山头喊一句话，就让羊乖乖回家。论文里当然不是这么写的，写的是随机群体密度的广播驱赶性，还做了仿真实验。
+                    这篇论文主要讲一种新方法。对于牧羊问题，完完全全只靠一个广播信号行不行？比如一个人站在山头喊一句话，就让羊乖乖回羊圈。论文里当然不是这么写的，写的是随机群体密度的广播驱赶性，还做了仿真实验。
                   </p>
-                  <button id="broadcast-button" class="broadcast-button" type="button">
-                    <i data-lucide="radio" aria-hidden="true"></i>
-                    <span>在山头喊一声</span>
-                  </button>
+                  <div class="broadcast-controls">
+                    <button
+                      id="broadcast-button"
+                      class="broadcast-button"
+                      type="button"
+                      aria-pressed="false"
+                      title="声音只用于触发当前页面中的动画"
+                    >
+                      <i data-lucide="mic" aria-hidden="true"></i>
+                      <span>开始喊话</span>
+                    </button>
+                    <button
+                      id="broadcast-preview"
+                      class="broadcast-preview"
+                      type="button"
+                      aria-label="不用麦克风，直接演示"
+                      title="不用麦克风，直接演示"
+                    >
+                      <i data-lucide="play" aria-hidden="true"></i>
+                    </button>
+                    <span class="voice-meter" aria-hidden="true">
+                      <span id="voice-meter-fill"></span>
+                    </span>
+                  </div>
                   <p id="broadcast-status" class="broadcast-status" aria-live="polite">
-                    还没有人喊。
+                    等你喊一声。
                   </p>
                 </div>
                 <div class="broadcast-field" aria-hidden="true">
-                  <span class="signal-source"><i data-lucide="radio-tower"></i></span>
-                  <span class="target-home"><i data-lucide="home"></i></span>
-                  <span class="agent agent-1"></span>
-                  <span class="agent agent-2"></span>
-                  <span class="agent agent-3"></span>
-                  <span class="agent agent-4"></span>
-                  <span class="agent agent-5"></span>
-                  <span class="agent agent-6"></span>
-                  <span class="agent agent-7"></span>
-                  <span class="agent agent-8"></span>
-                  <span class="signal-ring signal-ring-1"></span>
-                  <span class="signal-ring signal-ring-2"></span>
+                  <span class="terrain-line terrain-line-1"></span>
+                  <span class="terrain-line terrain-line-2"></span>
+                  <span class="terrain-line terrain-line-3"></span>
+
+                  <div class="broadcast-source">
+                    <span class="source-label">广播源</span>
+                    <img
+                      class="broadcast-shepherd"
+                      src="assets/broadcast-shepherd.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span id="broadcast-speech" class="speech-bubble">回羊圈啦</span>
+                    <span class="signal-ring signal-ring-1"></span>
+                    <span class="signal-ring signal-ring-2"></span>
+                    <span class="signal-ring signal-ring-3"></span>
+                  </div>
+
+                  <div class="home-zone">
+                    <i data-lucide="fence" aria-hidden="true"></i>
+                    <span>羊圈</span>
+                  </div>
+
+                  <span class="sheep sheep-1">
+                    <img src="assets/broadcast-sheep.png" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="sheep sheep-2">
+                    <img src="assets/broadcast-sheep.png" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="sheep sheep-3">
+                    <img src="assets/broadcast-sheep.png" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="sheep sheep-4">
+                    <img src="assets/broadcast-sheep.png" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="sheep sheep-5">
+                    <img src="assets/broadcast-sheep.png" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="sheep sheep-6">
+                    <img src="assets/broadcast-sheep.png" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="sheep sheep-7">
+                    <img src="assets/broadcast-sheep.png" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="sheep sheep-8">
+                    <img src="assets/broadcast-sheep.png" alt="" loading="lazy" decoding="async" />
+                  </span>
+
+                  <div class="flock-progress">
+                    <span>已进圈</span>
+                    <strong id="flock-count">0 / 8</strong>
+                  </div>
                 </div>
               </div>
 
