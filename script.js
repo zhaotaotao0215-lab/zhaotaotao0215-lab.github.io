@@ -1,126 +1,131 @@
-const root = document.documentElement;
-const themeToggle = document.querySelector("#theme-toggle");
-const themeColor = document.querySelector("#theme-color");
-const printButtons = document.querySelectorAll('[data-action="print"]');
-const filterButtons = document.querySelectorAll(".publication-filter");
-const publications = document.querySelectorAll("[data-publication]");
-const publicationCount = document.querySelector("#publication-count");
-const progressBar = document.querySelector(".scroll-progress span");
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+(() => {
+  const root = document.documentElement;
+  const themeToggle = document.querySelector("#theme-toggle");
+  const themeColor = document.querySelector("#theme-color");
+  const progressBar = document.querySelector(".reading-progress span");
+  const chapters = [...document.querySelectorAll("[data-chapter]")];
+  const chapterLinks = [...document.querySelectorAll("[data-chapter-link]")];
+  const broadcastDemo = document.querySelector("#broadcast-demo");
+  const broadcastButton = document.querySelector("#broadcast-button");
+  const broadcastStatus = document.querySelector("#broadcast-status");
 
-function renderIcons() {
-  if (window.lucide) {
-    window.lucide.createIcons();
-  }
-}
+  const createIcons = () => {
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  };
 
-function setTheme(theme, persist = false) {
-  const isDark = theme === "dark";
-  root.dataset.theme = isDark ? "dark" : "light";
+  const renderThemeControl = () => {
+    if (!themeToggle) return;
 
-  if (themeToggle) {
+    const isDark = root.dataset.theme !== "light";
     themeToggle.setAttribute("aria-checked", String(isDark));
     themeToggle.setAttribute(
       "aria-label",
       isDark ? "切换为浅色主题" : "切换为深色主题",
     );
+    themeToggle.innerHTML = `<i data-lucide="${isDark ? "sun" : "moon"}" aria-hidden="true"></i>`;
 
-    const icon = themeToggle.querySelector("svg, [data-lucide]");
-    if (icon) {
-      icon.outerHTML = isDark
-        ? '<i data-lucide="sun" aria-hidden="true">明</i>'
-        : '<i data-lucide="moon" aria-hidden="true">暗</i>';
+    if (themeColor) {
+      themeColor.setAttribute("content", isDark ? "#0c0f0e" : "#f1eee7");
     }
-  }
 
-  if (themeColor) {
-    themeColor.setAttribute("content", isDark ? "#101315" : "#f4f7f6");
-  }
+    createIcons();
+  };
 
-  if (persist) {
+  themeToggle?.addEventListener("click", () => {
+    const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+    root.dataset.theme = nextTheme;
+
     try {
-      localStorage.setItem("resume-theme", isDark ? "dark" : "light");
+      localStorage.setItem("story-theme", nextTheme);
     } catch (error) {
-      // The selected theme still applies for this page view.
+      // The theme still works when storage is unavailable.
     }
-  }
 
-  renderIcons();
-}
-
-function applyPublicationFilter(filter) {
-  let visibleCount = 0;
-
-  publications.forEach((publication) => {
-    const shouldShow =
-      filter === "all" || publication.dataset.category === filter;
-    publication.hidden = !shouldShow;
-    if (shouldShow) visibleCount += 1;
+    renderThemeControl();
   });
 
-  filterButtons.forEach((button) => {
-    const isActive = button.dataset.filter === filter;
-    button.classList.toggle("active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
-  });
+  let scrollTicking = false;
 
-  if (publicationCount) {
-    publicationCount.textContent =
-      filter === "all"
-        ? "共 " + visibleCount + " 篇"
-        : "显示 " + visibleCount + " 篇";
-  }
-}
+  const updateActiveChapter = () => {
+    if (!chapters.length) return;
 
-function updateScrollState() {
-  const scrollRange =
-    document.documentElement.scrollHeight - window.innerHeight;
-  const progress =
-    scrollRange > 0 ? Math.min(window.scrollY / scrollRange, 1) : 0;
+    const readingLine = Math.min(window.innerHeight * 0.42, 360);
+    let activeChapter = chapters[0];
 
-  if (progressBar) {
-    progressBar.style.width = progress * 100 + "%";
-  }
+    chapters.forEach((chapter) => {
+      if (chapter.getBoundingClientRect().top <= readingLine) {
+        activeChapter = chapter;
+      }
+    });
 
-  const headerOffset = 140;
-  let activeId = "";
-
-  navLinks.forEach((link) => {
-    const section = document.querySelector(link.getAttribute("href"));
-    if (section && section.getBoundingClientRect().top <= headerOffset) {
-      activeId = link.getAttribute("href");
+    if (
+      window.scrollY + window.innerHeight >=
+      document.documentElement.scrollHeight - 8
+    ) {
+      activeChapter = chapters.at(-1);
     }
-  });
 
-  navLinks.forEach((link) => {
-    const isActive = link.getAttribute("href") === activeId;
-    link.classList.toggle("active", isActive);
-    if (isActive) {
-      link.setAttribute("aria-current", "location");
-    } else {
-      link.removeAttribute("aria-current");
+    chapterLinks.forEach((link) => {
+      const isActive = link.dataset.chapterLink === activeChapter.id;
+      link.classList.toggle("is-active", isActive);
+      if (isActive) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const updateReadingProgress = () => {
+    if (!progressBar) return;
+
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+    progressBar.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
+    updateActiveChapter();
+    scrollTicking = false;
+  };
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      window.requestAnimationFrame(updateReadingProgress);
+    },
+    { passive: true },
+  );
+
+  window.addEventListener("resize", updateReadingProgress);
+
+  let broadcastTimer;
+
+  broadcastButton?.addEventListener("click", () => {
+    window.clearTimeout(broadcastTimer);
+    broadcastDemo.classList.remove("is-active");
+    void broadcastDemo.offsetWidth;
+    broadcastDemo.classList.add("is-active");
+
+    const label = broadcastButton.querySelector("span");
+    if (label) label.textContent = "再发一次广播";
+    broadcastStatus.textContent = "同一个信号已经发给整个群体。";
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (reducedMotion) {
+      broadcastStatus.textContent = "群体已经向目标位置靠拢。";
+      return;
     }
+
+    broadcastTimer = window.setTimeout(() => {
+      broadcastStatus.textContent = "没有逐个指挥，群体仍然向目标位置靠拢。";
+    }, 2300);
   });
-}
 
-themeToggle?.addEventListener("click", () => {
-  const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-  setTheme(nextTheme, true);
-});
-
-printButtons.forEach((button) => {
-  button.addEventListener("click", () => window.print());
-});
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    applyPublicationFilter(button.dataset.filter || "all");
-  });
-});
-
-window.addEventListener("scroll", updateScrollState, { passive: true });
-window.addEventListener("resize", updateScrollState);
-
-setTheme(root.dataset.theme || "dark");
-applyPublicationFilter("all");
-updateScrollState();
+  renderThemeControl();
+  updateReadingProgress();
+})();
