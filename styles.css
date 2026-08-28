@@ -489,38 +489,6 @@ blockquote {
   font-size: 1.75rem;
 }
 
-.score-shift {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 24px;
-  align-items: center;
-  margin: 44px 0;
-  padding: 28px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.score-shift span {
-  display: grid;
-  gap: 3px;
-  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
-  font-size: 1.6rem;
-}
-
-.score-shift span:last-child {
-  color: var(--accent-soft);
-  text-align: right;
-}
-
-.score-shift small {
-  color: var(--quiet);
-  font-size: 0.68rem;
-}
-
-.score-shift svg {
-  color: var(--quiet);
-}
-
 .fact-line {
   display: flex;
   flex-wrap: wrap;
@@ -1307,15 +1275,6 @@ blockquote {
 
   .short-quote {
     font-size: 1.4rem;
-  }
-
-  .score-shift {
-    gap: 15px;
-    margin: 34px 0;
-  }
-
-  .score-shift span {
-    font-size: 1.28rem;
   }
 
   .award-line {
