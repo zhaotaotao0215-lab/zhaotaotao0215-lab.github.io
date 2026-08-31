@@ -552,6 +552,7 @@ blockquote {
   color: var(--teal);
   font-size: 0.74rem;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .paper-mention strong {
@@ -1248,6 +1249,7 @@ html[data-theme="light"] .broadcast-story {
 .paper-index a span {
   color: var(--muted);
   font-size: 0.72rem;
+  overflow-wrap: anywhere;
 }
 
 .paper-index li > svg {
