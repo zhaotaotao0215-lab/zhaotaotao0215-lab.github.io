@@ -655,15 +655,6 @@ blockquote {
   border-left-color: var(--accent);
 }
 
-.paper-feature-static:hover {
-  background: var(--surface);
-  border-color: var(--accent);
-}
-
-.paper-feature-static:hover strong {
-  color: var(--text);
-}
-
 .broadcast-story {
   --scene-bg: #101713;
   --scene-ground: #1c2821;
@@ -1242,8 +1233,7 @@ html[data-theme="light"] .broadcast-story {
   font-size: 0.7rem;
 }
 
-.paper-index a,
-.paper-index-copy {
+.paper-index a {
   display: grid;
   gap: 7px;
   min-width: 0;
@@ -1256,15 +1246,10 @@ html[data-theme="light"] .broadcast-story {
   overflow-wrap: anywhere;
 }
 
-.paper-index a span,
-.paper-index-copy span {
+.paper-index a span {
   color: var(--muted);
   font-size: 0.72rem;
   overflow-wrap: anywhere;
-}
-
-.paper-index li:hover .paper-index-copy strong {
-  color: var(--text);
 }
 
 .paper-index li > svg {
