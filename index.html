@@ -8,6 +8,7 @@
       content="赵涛涛从 2014 年写起的个人经历：英华中学、阜阳师范大学、青岛大学，以及几篇论文前后的事情。"
     />
     <meta name="author" content="赵涛涛" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
     <meta
       name="keywords"
       content="赵涛涛, Taotao Zhao, 青岛大学, 系统科学, 多智能体系统, Broadcast Herdability, Synchronization-Herdability, 混沌网络, 分层编队, 个人故事, 学术主页"
@@ -146,11 +147,7 @@
           <span>TAOTAO ZHAO</span>
         </a>
 
-        <div class="nav-links">
-          <a href="#story">故事</a>
-          <a href="#papers">论文</a>
-          <a href="#contact">联系</a>
-        </div>
+        <div class="nav-links" aria-hidden="true"></div>
 
         <button
           id="theme-toggle"
@@ -204,7 +201,10 @@
         </div>
       </section>
 
-      <div id="story" class="story-layout">
+      <section id="story" class="blank-screen" aria-label="内容暂时隐藏"></section>
+
+      <template id="private-resume">
+      <div id="private-story" class="story-layout">
         <aside class="chapter-rail" aria-label="故事章节">
           <p>目录</p>
           <ol>
@@ -684,9 +684,10 @@
           </a>
         </div>
       </section>
+      </template>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" hidden>
       <p>© 2026 赵涛涛</p>
       <a href="#top">回到开头</a>
     </footer>

@@ -359,6 +359,11 @@ svg {
   line-height: 2;
 }
 
+.blank-screen {
+  min-height: 100svh;
+  background: #000;
+}
+
 .story-layout {
   display: grid;
   grid-template-columns: 210px minmax(0, var(--story-width));
