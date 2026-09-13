@@ -1,2 +1,14 @@
 User-agent: *
 Allow: /
+
+# ChatGPT search and user-requested browsing may index the public site.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+Sitemap: https://zhaotaotao0215-lab.github.io/sitemap.xml

@@ -1,0 +1,18 @@
+{
+  "id": "zhao2026leader",
+  "type": "article-journal",
+  "title": "Leader-actuated synchronization-herdability in chaotic networks",
+  "author": [
+    { "family": "Zhao", "given": "Taotao", "ORCID": "https://orcid.org/0009-0008-2184-6554" },
+    { "family": "Ji", "given": "Zhijian" },
+    { "family": "Zhao", "given": "Lanhao" },
+    { "family": "Tan", "given": "Linrong" }
+  ],
+  "container-title": "Chaos, Solitons & Fractals",
+  "volume": "212",
+  "page": "119004",
+  "issued": { "date-parts": [[2026, 11]] },
+  "DOI": "10.1016/j.chaos.2026.119004",
+  "URL": "https://doi.org/10.1016/j.chaos.2026.119004",
+  "ISSN": "0960-0779"
+}

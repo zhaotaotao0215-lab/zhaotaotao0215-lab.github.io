@@ -17,12 +17,19 @@ https://zhaotaotao0215-lab.github.io/
 - “广播驱赶性”概念互动
 - 深色/浅色阅读主题
 
-## 最新论文
+## 研究成果
 
-Taotao Zhao, Zhijian Ji, Lanhao Zhao, Linrong Tan,
-“Broadcast Herdability of Stochastic Swarm Densities,”
-*Communications in Nonlinear Science and Numerical Simulation*, 110727, 2026.
-[DOI](https://doi.org/10.1016/j.cnsns.2026.110727)
+学术索引页：
+
+```text
+https://zhaotaotao0215-lab.github.io/research/
+```
+
+目前收录三篇英文论文，每篇都有独立页面、DOI、出版社链接、摘要性介绍以及 BibTeX、RIS 和 JSON 引用数据：
+
+- *Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis*
+- *Leader-actuated synchronization-herdability in chaotic networks*
+- *Broadcast Herdability of Stochastic Swarm Densities*
 
 ## 项目结构
 
@@ -32,8 +39,12 @@ Taotao Zhao, Zhijian Ji, Lanhao Zhao, Linrong Tan,
 ├── styles.css        # 叙事排版、响应式与打印样式
 ├── script.js         # 阅读进度、章节导航、主题与论文互动
 ├── assets/           # 头像与故事封面
+├── research/         # 可索引的学术主页、论文详情与引用文件
+├── publications.bib  # 全部论文的 BibTeX 数据
+├── llms.txt          # 面向检索工具的站点索引
+├── llms-full.txt     # 机器可读的研究成果摘要
 ├── robots.txt        # 搜索引擎抓取规则
-├── sitemap.xml       # 公开主页站点地图
+├── sitemap.xml       # 公开页面站点地图
 └── nm/               # 课程/专题页面子目录
 ```
 
@@ -59,7 +70,7 @@ http://127.0.0.1:8765/
 ## 内容维护
 
 - 新增故事：在 `.story-article` 中添加一个 `section.chapter`，并同步章节目录。
-- 新增论文：在正文中加入链接，并在 `.paper-index` 中补充索引。
+- 新增论文：在正文和 `.paper-index` 中补充链接，并在 `research/` 中添加独立论文页。
 - 更新外链：保持 `target="_blank"` 和 `rel="noopener noreferrer"`。
 - 更新封面：替换 `assets/story-portrait.jpg`，并确认横向裁切适合桌面和手机。
 - 更新颜色：修改 `styles.css` 顶部的深色与浅色主题变量。

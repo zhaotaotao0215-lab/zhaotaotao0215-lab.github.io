@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://zhaotaotao0215-lab.github.io/</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://zhaotaotao0215-lab.github.io/research/</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://zhaotaotao0215-lab.github.io/research/leader-actuated-synchronization-herdability/</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+</urlset>

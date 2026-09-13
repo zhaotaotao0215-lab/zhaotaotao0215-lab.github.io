@@ -8,10 +8,10 @@
       content="赵涛涛从 2014 年写起的个人经历：英华中学、阜阳师范大学、青岛大学，以及几篇论文前后的事情。"
     />
     <meta name="author" content="赵涛涛" />
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <meta
       name="keywords"
-      content="赵涛涛, Taotao Zhao, 青岛大学, 系统科学, 多智能体系统, Broadcast Herdability, Synchronization-Herdability, 混沌网络, 分层编队, 个人故事, 学术主页"
+      content="赵涛涛, Taotao Zhao, 青岛大学, 系统科学, 多智能体系统, Broadcast Herdability, Synchronization-Herdability, 混沌网络, 数字孪生, 感应电机故障诊断, 分层编队, 个人故事, 学术主页"
     />
     <meta id="theme-color" name="theme-color" content="#0c0f0e" />
     <meta name="format-detection" content="telephone=no" />
@@ -66,6 +66,10 @@
         "email": "mailto:2057798834@qq.com",
         "url": "https://zhaotaotao0215-lab.github.io/",
         "image": "https://zhaotaotao0215-lab.github.io/assets/story-portrait.jpg",
+        "sameAs": [
+          "https://orcid.org/0009-0008-2184-6554",
+          "https://github.com/zhaotaotao0215-lab"
+        ],
         "affiliation": {
           "@type": "CollegeOrUniversity",
           "name": "青岛大学"
@@ -79,60 +83,9 @@
           "博弈控制",
           "随机群体密度",
           "精确可控性",
+          "数字孪生故障诊断",
           "分组编队"
         ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ScholarlyArticle",
-        "name": "Broadcast Herdability of Stochastic Swarm Densities",
-        "datePublished": "2026-08-28",
-        "author": [
-          {
-            "@type": "Person",
-            "@id": "https://zhaotaotao0215-lab.github.io/#person",
-            "name": "Taotao Zhao"
-          },
-          { "@type": "Person", "name": "Zhijian Ji" },
-          { "@type": "Person", "name": "Lanhao Zhao" },
-          { "@type": "Person", "name": "Linrong Tan" }
-        ],
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Communications in Nonlinear Science and Numerical Simulation",
-          "issn": "1007-5704"
-        },
-        "identifier": "https://doi.org/10.1016/j.cnsns.2026.110727",
-        "url": "https://www.sciencedirect.com/science/article/pii/S1007570426010816"
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ScholarlyArticle",
-        "name": "Leader-actuated synchronization-herdability in chaotic networks",
-        "description": "研究在不确定混沌网络中，通过驱动少数领导者使群体在有限时间内进入近似同步状态的条件与方法。",
-        "datePublished": "2026-09-06",
-        "author": [
-          {
-            "@type": "Person",
-            "@id": "https://zhaotaotao0215-lab.github.io/#person",
-            "name": "Taotao Zhao"
-          },
-          { "@type": "Person", "name": "Zhijian Ji" },
-          { "@type": "Person", "name": "Lanhao Zhao" },
-          { "@type": "Person", "name": "Linrong Tan" }
-        ],
-        "isPartOf": {
-          "@type": "Periodical",
-          "name": "Chaos, Solitons & Fractals"
-        },
-        "volumeNumber": "212",
-        "pagination": "119004",
-        "identifier": "https://doi.org/10.1016/j.chaos.2026.119004",
-        "url": "https://www.sciencedirect.com/science/article/pii/S0960077926011458"
       }
     </script>
   </head>
@@ -147,7 +100,12 @@
           <span>TAOTAO ZHAO</span>
         </a>
 
-        <div class="nav-links" aria-hidden="true"></div>
+        <div class="nav-links">
+          <a href="#story">故事</a>
+          <a href="#papers">论文</a>
+          <a href="research/">研究成果</a>
+          <a href="#contact">联系</a>
+        </div>
 
         <button
           id="theme-toggle"
@@ -201,10 +159,7 @@
         </div>
       </section>
 
-      <section id="story" class="blank-screen" aria-label="内容暂时隐藏"></section>
-
-      <template id="private-resume">
-      <div id="private-story" class="story-layout">
+      <div id="story" class="story-layout">
         <aside class="chapter-rail" aria-label="故事章节">
           <p>目录</p>
           <ol>
@@ -609,6 +564,14 @@
         <ol class="paper-index">
           <li>
             <time datetime="2026-09">2026.09</time>
+            <a href="https://iopscience.iop.org/article/10.1088/1361-6501/aea0f5" target="_blank" rel="noopener noreferrer">
+              <strong>Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis</strong>
+              <span>Measurement Science and Technology · 第一作者 · DOI 10.1088/1361-6501/aea0f5</span>
+            </a>
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </li>
+          <li>
+            <time datetime="2026-09">2026.09</time>
             <a href="https://www.sciencedirect.com/science/article/pii/S0960077926011458" target="_blank" rel="noopener noreferrer">
               <strong>Leader-actuated synchronization-herdability in chaotic networks</strong>
               <span>Chaos, Solitons &amp; Fractals · 第一作者 · Volume 212 · Article 119004 · DOI 10.1016/j.chaos.2026.119004</span>
@@ -684,10 +647,9 @@
           </a>
         </div>
       </section>
-      </template>
     </main>
 
-    <footer class="site-footer" hidden>
+    <footer class="site-footer">
       <p>© 2026 赵涛涛</p>
       <a href="#top">回到开头</a>
     </footer>

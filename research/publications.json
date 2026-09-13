@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0",
+  "lastVerified": "2026-09-13",
+  "author": {
+    "name": "Taotao Zhao",
+    "alternateName": "赵涛涛",
+    "affiliation": "Qingdao University",
+    "orcid": "https://orcid.org/0009-0008-2184-6554",
+    "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/"
+  },
+  "publications": [
+    {
+      "type": "journal-article",
+      "title": "Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis",
+      "authors": ["Taotao Zhao", "Z J Ji"],
+      "journal": "Measurement Science and Technology",
+      "publisher": "IOP Publishing",
+      "publishedOnline": "2026-09-01",
+      "doi": "10.1088/1361-6501/aea0f5",
+      "doiUrl": "https://doi.org/10.1088/1361-6501/aea0f5",
+      "publisherUrl": "https://iopscience.iop.org/article/10.1088/1361-6501/aea0f5",
+      "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/",
+      "summary": "A file-level audit of synthetic-to-real induction-motor fault diagnosis. Digital-twin data alone transfers poorly; a small real calibration set yields limited and condition-dependent gains.",
+      "keywords": [
+        "digital twin",
+        "induction motor fault diagnosis",
+        "synthetic-to-real transfer",
+        "acceleration measurements",
+        "few-shot calibration",
+        "probability calibration"
+      ]
+    },
+    {
+      "type": "journal-article",
+      "title": "Leader-actuated synchronization-herdability in chaotic networks",
+      "authors": ["Taotao Zhao", "Zhijian Ji", "Lanhao Zhao", "Linrong Tan"],
+      "journal": "Chaos, Solitons & Fractals",
+      "publisher": "Elsevier",
+      "volume": "212",
+      "articleNumber": "119004",
+      "publishedOnline": "2026-09-06",
+      "publicationMonth": "2026-11",
+      "doi": "10.1016/j.chaos.2026.119004",
+      "doiUrl": "https://doi.org/10.1016/j.chaos.2026.119004",
+      "publisherUrl": "https://www.sciencedirect.com/science/article/pii/S0960077926011458",
+      "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/leader-actuated-synchronization-herdability/",
+      "summary": "A finite-horizon framework for steering uncertain chaotic networks into an acceptable synchronization set through sparse leader actuation, local certificates, and rank-based residual uncertainty sets.",
+      "keywords": [
+        "synchronization-herdability",
+        "chaotic networks",
+        "leader actuation",
+        "sparse control",
+        "Hénon map",
+        "higher-order interactions"
+      ]
+    },
+    {
+      "type": "journal-article",
+      "title": "Broadcast herdability of stochastic swarm densities",
+      "authors": ["Taotao Zhao", "Zhijian Ji", "Lanhao Zhao", "Linrong Tan"],
+      "journal": "Communications in Nonlinear Science and Numerical Simulation",
+      "publisher": "Elsevier",
+      "volume": "163",
+      "articleNumber": "110727",
+      "publishedOnline": "2026-08-27",
+      "publicationMonth": "2026-11",
+      "doi": "10.1016/j.cnsns.2026.110727",
+      "doiUrl": "https://doi.org/10.1016/j.cnsns.2026.110727",
+      "publisherUrl": "https://www.sciencedirect.com/science/article/pii/S1007570426010816",
+      "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/",
+      "summary": "Introduces broadcast herdability for stochastic swarm densities and conditional Fokker-Planck Lyapunov mass bounds for simultaneous target and safety requirements under a shared low-dimensional cue.",
+      "keywords": [
+        "broadcast herdability",
+        "stochastic swarms",
+        "Fokker-Planck equation",
+        "Lyapunov safety certificate",
+        "mean-field control",
+        "swarm guidance"
+      ]
+    }
+  ]
+}

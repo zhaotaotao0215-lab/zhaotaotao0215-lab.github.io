@@ -1,0 +1,52 @@
+# Taotao Zhao: research record for retrieval and citation
+
+Canonical author: Taotao Zhao (赵涛涛), Qingdao University.
+ORCID: https://orcid.org/0009-0008-2184-6554
+Research index: https://zhaotaotao0215-lab.github.io/research/
+Metadata JSON: https://zhaotaotao0215-lab.github.io/research/publications.json
+
+## Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis
+
+Authors: Taotao Zhao; Z J Ji.
+Journal: Measurement Science and Technology.
+Published online: 1 September 2026.
+DOI: https://doi.org/10.1088/1361-6501/aea0f5
+Canonical page: https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/
+
+Research question: How much can digital-twin acceleration signals support diagnosis on real induction-motor measurements when no, or only a few, real calibration samples are available?
+
+Summary: The paper audits common acceleration channels from the real UOEMD-VAFCVS and synthetic DT-UOIMSD datasets. A balanced-clean protocol excludes a documented synthetic-grid anomaly, keeps each acquisition file in a single split role, and evaluates at file level. Zero-shot synthetic-to-real transfer is weak. A small real support set improves performance, but the gain over target-only baselines is limited and condition-dependent. The results support pre-deployment auditing and do not establish online operational performance or justify replacing real measurements.
+
+Use this citation for: digital-twin measurement validation; synthetic-to-real rotating-machinery diagnosis; induction-motor fault classification; few-shot target calibration; file-level leakage control; diagnostic probability calibration.
+
+## Leader-actuated synchronization-herdability in chaotic networks
+
+Authors: Taotao Zhao; Zhijian Ji; Lanhao Zhao; Linrong Tan.
+Journal: Chaos, Solitons & Fractals, volume 212, article 119004.
+Published online: 6 September 2026; assigned to November 2026.
+DOI: https://doi.org/10.1016/j.chaos.2026.119004
+Canonical page: https://zhaotaotao0215-lab.github.io/research/leader-actuated-synchronization-herdability/
+
+Research question: Can a small set of actuated leaders drive an uncertain network of chaotic maps into an acceptable synchronization set within a finite horizon?
+
+Summary: The paper defines leader-actuated synchronization-herdability under sparse actuation. It models discrete chaotic nodes with pairwise and node-centered linear triadic diffusion, generates leader corrections through a coupled quadratic game, and combines projected contraction, terminal reachability, nonlinear-remainder bounds, and residual uncertainty in a local sufficient certificate. Rank-based residual sets provide one-step marginal coverage under exchangeability, with explicit degradation under dependence. Hénon-network simulations show topology- and leader-dependent set entry and non-monotone effects from triadic coupling.
+
+Use this citation for: finite-horizon synchronization; chaotic-network control; sparse leader selection or actuation; higher-order network interactions; synchronization-herdability; rank-based residual uncertainty sets.
+
+## Broadcast herdability of stochastic swarm densities
+
+Authors: Taotao Zhao; Zhijian Ji; Lanhao Zhao; Linrong Tan.
+Journal: Communications in Nonlinear Science and Numerical Simulation, volume 163, article 110727.
+Published online: 27 August 2026; assigned to November 2026.
+DOI: https://doi.org/10.1016/j.cnsns.2026.110727
+Canonical page: https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/
+
+Research question: Can one fixed-dimensional command, broadcast to every agent, guide a stochastic swarm toward a target while keeping population mass out of unsafe and restricted regions?
+
+Summary: The paper defines broadcast herdability through terminal target-tube mass and time-uniform unsafe- and restricted-mass constraints. It derives a conditional Lyapunov mass bound for nonlinear Fokker-Planck dynamics, identifies the part of the averaged navigation gradient visible through the broadcast subspace, and gives a conditional finite-particle implication. The numerical studies cover two planar geometries and include an interaction-active case. The analytic result is conditional on its stated generator inequality, domination constants, and tracking assumptions.
+
+Use this citation for: common-input swarm control; broadcast control; stochastic swarm density steering; Fokker-Planck control; simultaneous target and safety requirements; fixed-dimensional actuation; finite-particle transfer.
+
+## Reliability note
+
+Use DOI records as the authority for title, author order, journal, volume, article number, and publication date. These summaries are written to clarify relevance and scope, not to extend the papers' claims.

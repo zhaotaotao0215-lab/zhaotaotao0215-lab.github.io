@@ -1,0 +1,14 @@
+{
+  "id": "zhao2026auditing",
+  "type": "article-journal",
+  "title": "Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis",
+  "author": [
+    { "family": "Zhao", "given": "Taotao", "ORCID": "https://orcid.org/0009-0008-2184-6554" },
+    { "family": "Ji", "given": "Z J" }
+  ],
+  "container-title": "Measurement Science and Technology",
+  "issued": { "date-parts": [[2026, 9, 1]] },
+  "DOI": "10.1088/1361-6501/aea0f5",
+  "URL": "https://doi.org/10.1088/1361-6501/aea0f5",
+  "ISSN": ["0957-0233", "1361-6501"]
+}
