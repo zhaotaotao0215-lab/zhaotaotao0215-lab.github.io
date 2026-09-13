@@ -447,10 +447,190 @@ h1 {
   margin-top: 20px;
 }
 
-.citation-files a {
+.citation-files a,
+.citation-files button {
   color: var(--link);
   font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
   font-size: 0.78rem;
+}
+
+.citation-files button {
+  min-width: 118px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.citation-files button:hover {
+  color: var(--accent-soft);
+}
+
+.topic-head {
+  padding: 88px 0 54px;
+  border-bottom: 1px solid var(--line);
+}
+
+.topic-head h1 {
+  max-width: 760px;
+}
+
+.topic-list,
+.citation-list {
+  padding: 34px 0 90px;
+}
+
+.topic-card {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.topic-card:first-child,
+.citation-entry:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.topic-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.topic-card h2,
+.citation-entry h2 {
+  margin: 0;
+  max-width: 900px;
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.topic-card > p:not(.topic-kicker):not(.term-aliases) {
+  max-width: 780px;
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
+.term-list,
+.index-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.term-list li,
+.index-terms li {
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface);
+  color: #c9cdca;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.term-aliases {
+  max-width: 880px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.topic-paper {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--link);
+  font-weight: 650;
+}
+
+.topic-paper:hover,
+.citation-entry h2 a:hover {
+  color: var(--accent-soft);
+}
+
+.citation-entry {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 28px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.formatted-citation {
+  max-width: 900px;
+  margin: 18px 0 0;
+  color: var(--muted);
+}
+
+.citation-entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  margin-top: 20px;
+}
+
+.citation-entry-actions a,
+.citation-entry-actions button {
+  color: var(--link);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.78rem;
+}
+
+.citation-entry-actions button {
+  min-width: 124px;
+  min-height: 38px;
+  padding: 7px 12px;
+  border: 1px solid var(--link);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.citation-entry-actions button:hover {
+  border-color: var(--accent-soft);
+  color: var(--accent-soft);
+}
+
+.citation-entry-actions button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.identity-note {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 90px;
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.identity-note h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+.identity-note p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+.identity-note a {
+  color: var(--link);
 }
 
 .related {
@@ -493,7 +673,8 @@ h1 {
 
 @media (max-width: 860px) {
   .index-intro,
-  .article-grid {
+  .article-grid,
+  .identity-note {
     grid-template-columns: 1fr;
     gap: 42px;
   }
@@ -531,6 +712,12 @@ h1 {
 
   .nav {
     min-height: 58px;
+    gap: 14px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 0.82rem;
   }
 
   .brand span,
@@ -539,6 +726,7 @@ h1 {
   }
 
   .index-intro,
+  .topic-head,
   .article-head {
     padding-top: 52px;
   }
@@ -551,6 +739,11 @@ h1 {
   }
 
   .paper-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .citation-entry {
     grid-template-columns: 1fr;
     gap: 10px;
   }

@@ -9,6 +9,10 @@
     { "family": "Tan", "given": "Linrong" }
   ],
   "container-title": "Chaos, Solitons & Fractals",
+  "publisher": "Elsevier",
+  "abstract": "A finite-horizon framework for steering uncertain chaotic networks into an acceptable synchronization set through sparse leader actuation, local certificates, and rank-based residual uncertainty sets.",
+  "keyword": "synchronization-herdability; chaotic network synchronization; sparse leader actuation; finite-horizon reachability; higher-order interactions; rank-based uncertainty sets",
+  "language": "en",
   "volume": "212",
   "page": "119004",
   "issued": { "date-parts": [[2026, 11]] },

@@ -4,8 +4,11 @@
   "author": {
     "name": "Taotao Zhao",
     "alternateName": "赵涛涛",
+    "nameVariants": ["Taotao Zhao", "Zhao, Taotao", "T. Zhao", "赵涛涛"],
     "affiliation": "Qingdao University",
+    "affiliationZh": "青岛大学",
     "orcid": "https://orcid.org/0009-0008-2184-6554",
+    "openAlex": "https://openalex.org/A5139276062",
     "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/"
   },
   "publications": [
@@ -20,6 +23,7 @@
       "doi": "10.1088/1361-6501/aea0f5",
       "doiUrl": "https://doi.org/10.1088/1361-6501/aea0f5",
       "publisherUrl": "https://iopscience.iop.org/article/10.1088/1361-6501/aea0f5",
+      "openAlex": "https://openalex.org/W7204930734",
       "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/",
       "summary": "A file-level audit of synthetic-to-real induction-motor fault diagnosis. Digital-twin data alone transfers poorly; a small real calibration set yields limited and condition-dependent gains.",
       "summaryZh": "以文件级划分审计数字孪生加速度测量向真实感应电机故障诊断的迁移；零样本迁移较弱，少量真实样本校准的增益有限且依赖工况。",
@@ -27,10 +31,16 @@
         "digital twin",
         "induction motor fault diagnosis",
         "synthetic-to-real transfer",
+        "sim-to-real transfer",
         "acceleration measurements",
+        "vibration-based condition monitoring",
+        "domain shift",
         "few-shot calibration",
-        "probability calibration"
-      ]
+        "probability calibration",
+        "file-level data leakage control"
+      ],
+      "keywordsZh": ["数字孪生", "感应电机故障诊断", "合成到真实迁移", "振动状态监测", "少样本校准"],
+      "citationText": "T. Zhao and Z. J. Ji, ‘Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis,’ Measurement Science and Technology, 2026, doi: 10.1088/1361-6501/aea0f5."
     },
     {
       "type": "journal-article",
@@ -46,17 +56,24 @@
       "doi": "10.1016/j.chaos.2026.119004",
       "doiUrl": "https://doi.org/10.1016/j.chaos.2026.119004",
       "publisherUrl": "https://www.sciencedirect.com/science/article/pii/S0960077926011458",
+      "openAlex": "https://openalex.org/W7210293216",
       "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/leader-actuated-synchronization-herdability/",
       "summary": "A finite-horizon framework for steering uncertain chaotic networks into an acceptable synchronization set through sparse leader actuation, local certificates, and rank-based residual uncertainty sets.",
       "summaryZh": "研究通过稀疏领导者驱动，将不确定混沌网络在有限时间内带入可接受同步集合的框架。",
       "keywords": [
         "synchronization-herdability",
-        "chaotic networks",
-        "leader actuation",
+        "chaotic network synchronization",
+        "sparse leader actuation",
         "sparse control",
-        "Hénon map",
-        "higher-order interactions"
-      ]
+        "finite-horizon reachability",
+        "Hénon map network",
+        "higher-order interactions",
+        "triadic diffusion",
+        "game-based control",
+        "rank-based uncertainty sets"
+      ],
+      "keywordsZh": ["同步驱赶性", "混沌网络同步", "领导者驱动", "有限时间可达性", "高阶网络", "残差不确定性"],
+      "citationText": "T. Zhao, Z. Ji, L. Zhao, and L. Tan, ‘Leader-actuated synchronization-herdability in chaotic networks,’ Chaos, Solitons & Fractals, vol. 212, art. 119004, 2026, doi: 10.1016/j.chaos.2026.119004."
     },
     {
       "type": "journal-article",
@@ -72,17 +89,24 @@
       "doi": "10.1016/j.cnsns.2026.110727",
       "doiUrl": "https://doi.org/10.1016/j.cnsns.2026.110727",
       "publisherUrl": "https://www.sciencedirect.com/science/article/pii/S1007570426010816",
+      "openAlex": "https://openalex.org/W7204495080",
       "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/",
       "summary": "Introduces broadcast herdability for stochastic swarm densities and conditional Fokker-Planck Lyapunov mass bounds for simultaneous target and safety requirements under a shared low-dimensional cue.",
       "summaryZh": "定义随机群体密度的广播驱赶性，并给出公共低维信号下同时处理目标与安全要求的条件性 Fokker-Planck Lyapunov 概率质量界。",
       "keywords": [
         "broadcast herdability",
-        "stochastic swarms",
-        "Fokker-Planck equation",
-        "Lyapunov safety certificate",
+        "broadcast control",
+        "common-input swarm control",
+        "stochastic swarm densities",
+        "swarm density steering",
+        "Fokker-Planck control",
         "mean-field control",
-        "swarm guidance"
-      ]
+        "Lyapunov mass bounds",
+        "probability mass constraints",
+        "low-dimensional actuation"
+      ],
+      "keywordsZh": ["广播驱赶性", "随机群体密度", "公共信号群体控制", "Fokker-Planck 方程", "概率质量安全约束"],
+      "citationText": "T. Zhao, Z. Ji, L. Zhao, and L. Tan, ‘Broadcast herdability of stochastic swarm densities,’ Communications in Nonlinear Science and Numerical Simulation, vol. 163, art. 110727, 2026, doi: 10.1016/j.cnsns.2026.110727."
     }
   ]
 }

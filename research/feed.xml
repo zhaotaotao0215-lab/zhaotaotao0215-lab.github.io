@@ -16,6 +16,11 @@
     <updated>2026-09-13T00:00:00+08:00</updated>
     <link rel="alternate" href="https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/" />
     <link rel="related" href="https://doi.org/10.1088/1361-6501/aea0f5" />
+    <category term="digital twin" />
+    <category term="synthetic-to-real transfer" />
+    <category term="induction motor fault diagnosis" />
+    <category term="vibration-based condition monitoring" />
+    <category term="数字孪生故障诊断" />
     <summary>A file-level audit of synthetic-to-real induction-motor fault diagnosis using digital-twin and real acceleration measurements.</summary>
   </entry>
   <entry>
@@ -25,6 +30,11 @@
     <updated>2026-09-13T00:00:00+08:00</updated>
     <link rel="alternate" href="https://zhaotaotao0215-lab.github.io/research/leader-actuated-synchronization-herdability/" />
     <link rel="related" href="https://doi.org/10.1016/j.chaos.2026.119004" />
+    <category term="synchronization-herdability" />
+    <category term="chaotic network synchronization" />
+    <category term="sparse leader actuation" />
+    <category term="higher-order interactions" />
+    <category term="混沌网络同步" />
     <summary>A finite-horizon synchronization-herdability framework for uncertain chaotic networks under sparse leader actuation.</summary>
   </entry>
   <entry>
@@ -34,6 +44,11 @@
     <updated>2026-09-13T00:00:00+08:00</updated>
     <link rel="alternate" href="https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/" />
     <link rel="related" href="https://doi.org/10.1016/j.cnsns.2026.110727" />
+    <category term="broadcast herdability" />
+    <category term="common-input swarm control" />
+    <category term="stochastic swarm densities" />
+    <category term="Fokker-Planck control" />
+    <category term="广播驱赶性" />
     <summary>Broadcast herdability and conditional Fokker-Planck Lyapunov mass bounds for stochastic swarm density guidance.</summary>
   </entry>
 </feed>

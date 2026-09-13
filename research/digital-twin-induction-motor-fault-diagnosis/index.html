@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <meta
       name="keywords"
-      content="digital twin, induction motor fault diagnosis, synthetic-to-real transfer, acceleration measurements, few-shot calibration, probability calibration, Taotao Zhao, 赵涛涛, 数字孪生, 感应电机故障诊断, 合成到真实迁移"
+      content="digital twin, induction motor fault diagnosis, synthetic-to-real transfer, sim-to-real transfer, acceleration measurements, vibration-based condition monitoring, domain shift, few-shot calibration, probability calibration, file-level data leakage, UOEMD-VAFCVS, DT-UOIMSD, Taotao Zhao, 赵涛涛, 数字孪生, 感应电机故障诊断, 合成到真实迁移"
     />
     <link
       rel="canonical"
@@ -38,8 +38,9 @@
     <meta name="citation_doi" content="10.1088/1361-6501/aea0f5" />
     <meta name="citation_publisher" content="IOP Publishing" />
     <meta name="citation_language" content="en" />
-    <meta name="citation_keywords" content="digital twin; induction motor fault diagnosis; synthetic-to-real transfer; acceleration measurements; few-shot calibration; probability calibration" />
+    <meta name="citation_keywords" content="digital twin; induction motor fault diagnosis; synthetic-to-real transfer; acceleration measurements; vibration-based condition monitoring; domain shift; few-shot calibration; probability calibration; file-level data leakage" />
     <meta name="citation_abstract" content="A file-level audit of synthetic-to-real induction-motor fault diagnosis showing weak transfer from digital-twin acceleration measurements without real calibration and limited, condition-dependent gains from a small real support set." />
+    <meta name="citation_abstract_html_url" content="https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/#summary" />
     <meta name="dc.title" content="Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis" />
     <meta name="dc.creator" content="Taotao Zhao" />
     <meta name="dc.creator" content="Z J Ji" />
@@ -47,6 +48,13 @@
     <meta name="dc.identifier" content="doi:10.1088/1361-6501/aea0f5" />
     <meta name="dc.type" content="Text.Article.Journal" />
     <meta name="dc.language" content="en" />
+    <meta name="dc.description" content="A leakage-aware audit of digital-twin acceleration measurements for synthetic-to-real induction-motor fault diagnosis." />
+    <meta name="dc.subject" content="digital twin" />
+    <meta name="dc.subject" content="synthetic-to-real transfer" />
+    <meta name="dc.subject" content="induction motor fault diagnosis" />
+    <meta name="dc.subject" content="vibration-based condition monitoring" />
+    <meta name="dc.subject" content="few-shot calibration" />
+    <meta name="dc.subject" content="probability calibration" />
 
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis" />
@@ -62,7 +70,8 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Digital-twin measurements for synthetic-to-real motor fault diagnosis" />
     <meta name="twitter:description" content="Canonical metadata, contribution summary, DOI, and citation files." />
-    <link rel="stylesheet" href="../styles.css?v=20260913" />
+    <link rel="stylesheet" href="../styles.css?v=20260913b" />
+    <script src="../citation.js" defer></script>
 
     <script type="application/ld+json">
       {
@@ -75,7 +84,8 @@
         "mainEntityOfPage": "https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/",
         "sameAs": [
           "https://doi.org/10.1088/1361-6501/aea0f5",
-          "https://iopscience.iop.org/article/10.1088/1361-6501/aea0f5"
+          "https://iopscience.iop.org/article/10.1088/1361-6501/aea0f5",
+          "https://openalex.org/W7204930734"
         ],
         "datePublished": "2026-09-01",
         "dateModified": "2026-09-13",
@@ -89,22 +99,41 @@
           "few-shot calibration",
           "probability calibration",
           "measurement audit",
+          "vibration-based condition monitoring",
+          "domain shift",
+          "file-level data leakage control",
           "数字孪生",
           "感应电机故障诊断",
           "合成到真实迁移"
         ],
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "DOI",
-          "value": "10.1088/1361-6501/aea0f5"
-        },
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "propertyID": "DOI",
+            "value": "10.1088/1361-6501/aea0f5"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "OpenAlex",
+            "value": "W7204930734"
+          }
+        ],
+        "about": [
+          {
+            "@type": "DefinedTerm",
+            "name": "Synthetic-to-real motor fault diagnosis",
+            "url": "https://zhaotaotao0215-lab.github.io/research/topics/#digital-twin-diagnostics"
+          },
+          { "@type": "DefinedTerm", "name": "Digital-twin measurements" },
+          { "@type": "DefinedTerm", "name": "Vibration-based condition monitoring" }
+        ],
         "author": [
           {
             "@type": "Person",
             "@id": "https://orcid.org/0009-0008-2184-6554",
             "name": "Taotao Zhao",
-            "alternateName": "赵涛涛",
-            "sameAs": "https://orcid.org/0009-0008-2184-6554",
+            "alternateName": ["赵涛涛", "Zhao, Taotao", "T. Zhao"],
+            "sameAs": ["https://orcid.org/0009-0008-2184-6554", "https://openalex.org/A5139276062"],
             "affiliation": { "@type": "CollegeOrUniversity", "name": "Qingdao University" }
           },
           {
@@ -129,6 +158,8 @@
         <a class="brand" href="../">Taotao Zhao <span>RESEARCH</span></a>
         <div class="nav-links">
           <a href="../">All papers</a>
+          <a href="../topics/">Topics</a>
+          <a href="../citations/">Cite</a>
           <a class="optional" href="https://orcid.org/0009-0008-2184-6554" rel="me">ORCID</a>
         </div>
       </nav>
@@ -200,6 +231,23 @@
             </section>
 
             <section>
+              <h2>Index terms</h2>
+              <ul class="index-terms" aria-label="Research keywords">
+                <li>digital twin</li>
+                <li>synthetic-to-real transfer</li>
+                <li>induction motor fault diagnosis</li>
+                <li>acceleration measurements</li>
+                <li>vibration-based condition monitoring</li>
+                <li>few-shot calibration</li>
+                <li>probability calibration</li>
+                <li>file-level data leakage control</li>
+              </ul>
+              <p class="term-aliases" lang="zh-CN">
+                中文检索词：数字孪生、合成到真实迁移、感应电机故障诊断、振动状态监测、少样本校准。
+              </p>
+            </section>
+
+            <section>
               <h2>Evidence and scope</h2>
               <p>
                 Zero-shot transfer produced macro-F1 0.087 and expected calibration error
@@ -224,12 +272,13 @@
 
           <aside class="citation-panel" aria-labelledby="citation-title">
             <h2 id="citation-title">Suggested citation</h2>
-            <p>
+            <p id="suggested-citation">
               T. Zhao and Z. J. Ji, “Auditing digital-twin acceleration measurements for
               synthetic-to-real induction motor fault diagnosis,” <em>Measurement Science and Technology</em>,
               2026. doi: 10.1088/1361-6501/aea0f5.
             </p>
             <div class="citation-files">
+              <button type="button" data-copy-target="#suggested-citation">Copy citation</button>
               <a href="citation.bib">BibTeX</a>
               <a href="citation.ris">RIS</a>
               <a href="citation.json">CSL-JSON</a>

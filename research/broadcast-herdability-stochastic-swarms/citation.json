@@ -9,6 +9,10 @@
     { "family": "Tan", "given": "Linrong" }
   ],
   "container-title": "Communications in Nonlinear Science and Numerical Simulation",
+  "publisher": "Elsevier",
+  "abstract": "Introduces broadcast herdability for stochastic swarm densities and conditional Fokker-Planck Lyapunov mass bounds for simultaneous target and safety requirements under a shared low-dimensional cue.",
+  "keyword": "broadcast herdability; common-input swarm control; stochastic swarm densities; Fokker-Planck control; mean-field control; probability mass constraints",
+  "language": "en",
   "volume": "163",
   "page": "110727",
   "issued": { "date-parts": [[2026, 11]] },

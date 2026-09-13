@@ -25,11 +25,16 @@ https://zhaotaotao0215-lab.github.io/
 https://zhaotaotao0215-lab.github.io/research/
 ```
 
-目前收录三篇英文论文，每篇都有独立页面、DOI、出版社链接、中英文检索摘要以及 BibTeX、RIS 和 JSON 引用数据：
+目前收录三篇英文论文，每篇都有独立页面、DOI、出版社链接、中英文检索摘要、规范主题词以及 BibTeX、RIS 和 JSON 引用数据：
 
 - *Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis*. [DOI](https://doi.org/10.1088/1361-6501/aea0f5)
 - *Leader-actuated synchronization-herdability in chaotic networks*. [DOI](https://doi.org/10.1016/j.chaos.2026.119004)
 - *Broadcast Herdability of Stochastic Swarm Densities*. [DOI](https://doi.org/10.1016/j.cnsns.2026.110727)
+
+辅助入口：
+
+- [研究主题与中英文关键词](https://zhaotaotao0215-lab.github.io/research/topics/)
+- [标准引用与引用文件下载](https://zhaotaotao0215-lab.github.io/research/citations/)
 
 ## 项目结构
 
@@ -39,7 +44,7 @@ https://zhaotaotao0215-lab.github.io/research/
 ├── styles.css        # 叙事排版、响应式与打印样式
 ├── script.js         # 阅读进度、章节导航、主题与论文互动
 ├── assets/           # 头像与故事封面
-├── research/         # 可索引的学术主页、论文详情与引用文件
+├── research/         # 可索引的学术主页、主题索引、论文详情与引用文件
 ├── publications.bib  # 全部论文的 BibTeX 数据
 ├── llms.txt          # 面向检索工具的站点索引
 ├── llms-full.txt     # 机器可读的研究成果摘要
