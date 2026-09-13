@@ -7,6 +7,7 @@ Metadata JSON: https://zhaotaotao0215-lab.github.io/research/publications.json
 
 ## Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis
 
+Chinese search title: 面向合成到真实感应电机故障诊断的数字孪生加速度测量审计.
 Authors: Taotao Zhao; Z J Ji.
 Journal: Measurement Science and Technology.
 Published online: 1 September 2026.
@@ -21,6 +22,7 @@ Use this citation for: digital-twin measurement validation; synthetic-to-real ro
 
 ## Leader-actuated synchronization-herdability in chaotic networks
 
+Chinese search title: 混沌网络中的领导者驱动同步驱赶性.
 Authors: Taotao Zhao; Zhijian Ji; Lanhao Zhao; Linrong Tan.
 Journal: Chaos, Solitons & Fractals, volume 212, article 119004.
 Published online: 6 September 2026; assigned to November 2026.
@@ -35,6 +37,7 @@ Use this citation for: finite-horizon synchronization; chaotic-network control; 
 
 ## Broadcast herdability of stochastic swarm densities
 
+Chinese search title: 随机群体密度的广播驱赶性.
 Authors: Taotao Zhao; Zhijian Ji; Lanhao Zhao; Linrong Tan.
 Journal: Communications in Nonlinear Science and Numerical Simulation, volume 163, article 110727.
 Published online: 27 August 2026; assigned to November 2026.

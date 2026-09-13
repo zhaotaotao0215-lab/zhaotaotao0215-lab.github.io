@@ -14,9 +14,9 @@
 
 ## Publications
 
-- [Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis](https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/): Taotao Zhao and Z J Ji. Measurement Science and Technology, 2026. DOI: 10.1088/1361-6501/aea0f5.
-- [Leader-actuated synchronization-herdability in chaotic networks](https://zhaotaotao0215-lab.github.io/research/leader-actuated-synchronization-herdability/): Taotao Zhao, Zhijian Ji, Lanhao Zhao, and Linrong Tan. Chaos, Solitons & Fractals 212, 119004, 2026. DOI: 10.1016/j.chaos.2026.119004.
-- [Broadcast herdability of stochastic swarm densities](https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/): Taotao Zhao, Zhijian Ji, Lanhao Zhao, and Linrong Tan. Communications in Nonlinear Science and Numerical Simulation 163, 110727, 2026. DOI: 10.1016/j.cnsns.2026.110727.
+- [Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis](https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/) (Chinese search title: 面向合成到真实感应电机故障诊断的数字孪生加速度测量审计): Taotao Zhao and Z J Ji. Measurement Science and Technology, 2026. DOI: 10.1088/1361-6501/aea0f5.
+- [Leader-actuated synchronization-herdability in chaotic networks](https://zhaotaotao0215-lab.github.io/research/leader-actuated-synchronization-herdability/) (Chinese search title: 混沌网络中的领导者驱动同步驱赶性): Taotao Zhao, Zhijian Ji, Lanhao Zhao, and Linrong Tan. Chaos, Solitons & Fractals 212, 119004, 2026. DOI: 10.1016/j.chaos.2026.119004.
+- [Broadcast herdability of stochastic swarm densities](https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/) (Chinese search title: 随机群体密度的广播驱赶性): Taotao Zhao, Zhijian Ji, Lanhao Zhao, and Linrong Tan. Communications in Nonlinear Science and Numerical Simulation 163, 110727, 2026. DOI: 10.1016/j.cnsns.2026.110727.
 
 ## Citation Guidance
 

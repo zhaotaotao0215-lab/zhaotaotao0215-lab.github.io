@@ -12,6 +12,7 @@
     {
       "type": "journal-article",
       "title": "Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis",
+      "titleZh": "面向合成到真实感应电机故障诊断的数字孪生加速度测量审计",
       "authors": ["Taotao Zhao", "Z J Ji"],
       "journal": "Measurement Science and Technology",
       "publisher": "IOP Publishing",
@@ -21,6 +22,7 @@
       "publisherUrl": "https://iopscience.iop.org/article/10.1088/1361-6501/aea0f5",
       "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/",
       "summary": "A file-level audit of synthetic-to-real induction-motor fault diagnosis. Digital-twin data alone transfers poorly; a small real calibration set yields limited and condition-dependent gains.",
+      "summaryZh": "以文件级划分审计数字孪生加速度测量向真实感应电机故障诊断的迁移；零样本迁移较弱，少量真实样本校准的增益有限且依赖工况。",
       "keywords": [
         "digital twin",
         "induction motor fault diagnosis",
@@ -33,6 +35,7 @@
     {
       "type": "journal-article",
       "title": "Leader-actuated synchronization-herdability in chaotic networks",
+      "titleZh": "混沌网络中的领导者驱动同步驱赶性",
       "authors": ["Taotao Zhao", "Zhijian Ji", "Lanhao Zhao", "Linrong Tan"],
       "journal": "Chaos, Solitons & Fractals",
       "publisher": "Elsevier",
@@ -45,6 +48,7 @@
       "publisherUrl": "https://www.sciencedirect.com/science/article/pii/S0960077926011458",
       "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/leader-actuated-synchronization-herdability/",
       "summary": "A finite-horizon framework for steering uncertain chaotic networks into an acceptable synchronization set through sparse leader actuation, local certificates, and rank-based residual uncertainty sets.",
+      "summaryZh": "研究通过稀疏领导者驱动，将不确定混沌网络在有限时间内带入可接受同步集合的框架。",
       "keywords": [
         "synchronization-herdability",
         "chaotic networks",
@@ -57,6 +61,7 @@
     {
       "type": "journal-article",
       "title": "Broadcast herdability of stochastic swarm densities",
+      "titleZh": "随机群体密度的广播驱赶性",
       "authors": ["Taotao Zhao", "Zhijian Ji", "Lanhao Zhao", "Linrong Tan"],
       "journal": "Communications in Nonlinear Science and Numerical Simulation",
       "publisher": "Elsevier",
@@ -69,6 +74,7 @@
       "publisherUrl": "https://www.sciencedirect.com/science/article/pii/S1007570426010816",
       "canonicalPage": "https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/",
       "summary": "Introduces broadcast herdability for stochastic swarm densities and conditional Fokker-Planck Lyapunov mass bounds for simultaneous target and safety requirements under a shared low-dimensional cue.",
+      "summaryZh": "定义随机群体密度的广播驱赶性，并给出公共低维信号下同时处理目标与安全要求的条件性 Fokker-Planck Lyapunov 概率质量界。",
       "keywords": [
         "broadcast herdability",
         "stochastic swarms",

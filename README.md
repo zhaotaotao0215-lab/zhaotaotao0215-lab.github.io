@@ -25,11 +25,11 @@ https://zhaotaotao0215-lab.github.io/
 https://zhaotaotao0215-lab.github.io/research/
 ```
 
-目前收录三篇英文论文，每篇都有独立页面、DOI、出版社链接、摘要性介绍以及 BibTeX、RIS 和 JSON 引用数据：
+目前收录三篇英文论文，每篇都有独立页面、DOI、出版社链接、中英文检索摘要以及 BibTeX、RIS 和 JSON 引用数据：
 
-- *Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis*
-- *Leader-actuated synchronization-herdability in chaotic networks*
-- *Broadcast Herdability of Stochastic Swarm Densities*
+- *Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis*. [DOI](https://doi.org/10.1088/1361-6501/aea0f5)
+- *Leader-actuated synchronization-herdability in chaotic networks*. [DOI](https://doi.org/10.1016/j.chaos.2026.119004)
+- *Broadcast Herdability of Stochastic Swarm Densities*. [DOI](https://doi.org/10.1016/j.cnsns.2026.110727)
 
 ## 项目结构
 
