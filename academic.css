@@ -103,7 +103,7 @@ a:focus-visible {
 .page-header h1 {
   margin: 0 0 2px;
   color: #4f7fbd;
-  font-size: clamp(2rem, 3vw, 2.65rem);
+  font-size: 2.4rem;
   line-height: 1.12;
 }
 
@@ -113,16 +113,16 @@ a:focus-visible {
 
 .profile {
   display: grid;
-  grid-template-columns: minmax(220px, 290px) minmax(0, 680px);
-  gap: 36px;
+  grid-template-columns: 180px minmax(0, 680px);
+  gap: 28px;
   align-items: center;
-  max-width: 1040px;
-  margin-bottom: 36px;
+  max-width: 888px;
+  margin-bottom: 28px;
 }
 
 .profile-photo-frame {
   width: 100%;
-  max-width: 290px;
+  max-width: 180px;
   aspect-ratio: 4 / 5;
   overflow: hidden;
   background: #f4f4f4;
@@ -261,6 +261,11 @@ a:focus-visible {
 }
 
 footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
   margin-top: 42px;
   padding-top: 10px;
   border-top: 1px solid var(--soft-line);
@@ -270,6 +275,21 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+.pageviews {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.pageviews span {
+  min-width: 7ch;
+  font-variant-numeric: tabular-nums;
+}
+
+html:not(.js-enabled) .pageviews {
+  display: none;
 }
 
 @media (max-width: 840px) {
@@ -317,12 +337,12 @@ footer p {
   }
 
   .profile {
-    grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
-    gap: 26px;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 24px;
   }
 
   .profile-photo-frame {
-    max-width: 240px;
+    max-width: 180px;
   }
 }
 
@@ -335,13 +355,17 @@ footer p {
     margin-bottom: 22px;
   }
 
+  .page-header h1 {
+    font-size: 1.9rem;
+  }
+
   .profile {
     grid-template-columns: 1fr;
     gap: 18px;
   }
 
   .profile-photo-frame {
-    max-width: 240px;
+    max-width: 160px;
   }
 
   .profile-details {
@@ -361,7 +385,9 @@ footer p {
 
 @media print {
   .sidebar,
-  .skip-link {
+  .skip-link,
+  .pageviews,
+  footer noscript {
     display: none;
   }
 

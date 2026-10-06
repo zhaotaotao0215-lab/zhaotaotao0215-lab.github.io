@@ -39,6 +39,7 @@ https://zhaotaotao0215-lab.github.io/research/
 .
 ├── index.html        # 学术主页、论文链接与 SEO 元信息
 ├── academic.css      # 学术主页排版与响应式样式
+├── pageviews.js      # 公开主页浏览量与失败状态处理
 ├── assets/           # 个人头像
 ├── research/         # 可索引的学术主页、主题索引、论文详情与引用文件
 ├── publications.bib  # 全部论文的 BibTeX 数据
@@ -73,6 +74,13 @@ http://127.0.0.1:8765/
 - 新增论文：在主页的 Publications 中补充条目，并在 `research/` 中添加独立论文页。
 - 更新外链：保持 `target="_blank"` 和 `rel="noopener noreferrer"`。
 - 更新主页样式：修改 `academic.css`。
+
+## 浏览量与搜索展示
+
+- 页脚浏览量使用[不蒜子](https://busuanzi.ibruce.info/)的站点 PV 计数，目前仅主页接入。它统计浏览次数，不代表独立访客、论文阅读量或引用次数，也不会补算接入前的历史访问。
+- `pageviews.js` 只在 `zhaotaotao0215-lab.github.io` 加载计数服务；本地、文件和预览页面不计数。服务失败或超过 8 秒未返回数字时显示“暂不可用”，不填造数据。
+- 网页标题、搜索摘要、分享标题和站点名称统一为学术主页信息， favicon 为 TZ 字母标识。旧版故事文字已经不在当前页面中。
+- 搜索引擎决定最终展示的标题和摘要；发布后仍需等待重新抓取。可在 Google Search Console 使用网址检查请求重新编入索引，不能保证立即刷新或固定展示文字。参考 [Google 标题链接说明](https://developers.google.com/search/docs/appearance/title-link?hl=zh-cn)与[摘要说明](https://developers.google.com/search/docs/appearance/snippet?hl=zh-cn)。
 
 ## 维护检查清单
 
