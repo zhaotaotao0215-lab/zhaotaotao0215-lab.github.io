@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://zhaotaotao0215-lab.github.io/research/</id>
   <title>Taotao Zhao Research Publications</title>
-  <updated>2026-09-13T00:00:00+08:00</updated>
+  <updated>2026-10-06T00:00:00+08:00</updated>
   <link rel="self" href="https://zhaotaotao0215-lab.github.io/research/feed.xml" />
   <link rel="alternate" href="https://zhaotaotao0215-lab.github.io/research/" />
   <author>
@@ -41,7 +41,7 @@
     <id>https://doi.org/10.1016/j.cnsns.2026.110727</id>
     <title>Broadcast herdability of stochastic swarm densities</title>
     <published>2026-08-27T00:00:00+08:00</published>
-    <updated>2026-09-13T00:00:00+08:00</updated>
+    <updated>2026-10-06T00:00:00+08:00</updated>
     <link rel="alternate" href="https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/" />
     <link rel="related" href="https://doi.org/10.1016/j.cnsns.2026.110727" />
     <category term="broadcast herdability" />

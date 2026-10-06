@@ -1,6 +1,8 @@
 # Taotao Zhao: research record for retrieval and citation
 
 Canonical author: Taotao Zhao (赵涛涛), Qingdao University.
+Institute: Academy of Systems Science and Control (青岛大学系统科学研究院), https://assc.qdu.edu.cn/.
+Current research interest: pursuit-evasion games (追逃博弈).
 Name forms used for retrieval: Taotao Zhao; Zhao, Taotao; T. Zhao; 赵涛涛.
 ORCID: https://orcid.org/0009-0008-2184-6554
 OpenAlex author: https://openalex.org/A5139276062
@@ -53,7 +55,7 @@ Suggested citation: T. Zhao, Z. Ji, L. Zhao, and L. Tan, “Leader-actuated sync
 
 Chinese search title: 随机群体密度的广播驱赶性.
 Authors: Taotao Zhao; Zhijian Ji; Lanhao Zhao; Linrong Tan.
-Journal: Communications in Nonlinear Science and Numerical Simulation, volume 163, article 110727.
+Journal: Communications in Nonlinear Science and Numerical Simulation, volume 163, Part 6, article 110727.
 Published online: 27 August 2026; assigned to November 2026.
 DOI: https://doi.org/10.1016/j.cnsns.2026.110727
 Canonical page: https://zhaotaotao0215-lab.github.io/research/broadcast-herdability-stochastic-swarms/
@@ -66,7 +68,7 @@ Use this citation for: common-input swarm control; broadcast control; stochastic
 
 Retrieval terms: broadcast herdability; broadcast control; common-input swarm control; shared control signal; stochastic swarm densities; swarm density steering; Fokker-Planck control; mean-field control; Lyapunov mass bounds; probability mass constraints; low-dimensional actuation; safe swarm guidance. Chinese terms: 广播驱赶性; 随机群体密度; 公共信号群体控制; Fokker-Planck 方程; 概率质量安全约束.
 
-Suggested citation: T. Zhao, Z. Ji, L. Zhao, and L. Tan, “Broadcast herdability of stochastic swarm densities,” Communications in Nonlinear Science and Numerical Simulation, vol. 163, art. 110727, 2026, doi: 10.1016/j.cnsns.2026.110727.
+Suggested citation: T. Zhao, Z. Ji, L. Zhao, and L. Tan, “Broadcast herdability of stochastic swarm densities,” Communications in Nonlinear Science and Numerical Simulation, vol. 163, part 6, art. 110727, 2026, doi: 10.1016/j.cnsns.2026.110727.
 
 ## Reliability note
 

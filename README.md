@@ -79,3 +79,10 @@ http://127.0.0.1:8765/
 - 公开链接、论文链接和邮箱链接可以正常打开。
 - 手机宽度下头像、个人信息和长论文标题不挤压。
 - DOI、出版社页面与 BibTeX、RIS、CSL-JSON 文件保持可用。
+
+## 书目信息核对（2026-10-06）
+
+- [CNSNS 出版社条目](https://www.sciencedirect.com/science/article/abs/pii/S1007570426010816)列为 Volume 163, Part 6, November 2026, 110727，已同步主页、论文页及引用文件。
+- [CCDC 官方 PDF](https://cmsweb.com.sg/rps2prod/ccdc2026/epro/pdf/SunCIS-31.pdf)印刷页码为 3361–3366，与之前提供的 3318–3323 不一致。主页暂不列页码；正式 IEEE 条目尚未重新核验。题名、作者及会议信息已与[会务官网](https://cmsweb.com.sg/rps2prod/ccdc2026/epro/html/SunCIS-31.html)核对。
+- IOP、《控制与决策》和部分 Elsevier 页面访问受限；本次没有确认这些论文新增的卷期、文章号或正式出版状态，保留之前的数据。
+- 作者当前机构为青岛大学系统科学研究院，当前兴趣为追逃博弈；论文原有署名及研究主题按其出版记录保留。
