@@ -1,32 +1,61 @@
 (() => {
-  const count = document.getElementById("busuanzi_value_site_pv");
-  if (!count) return;
+  const status = document.getElementById("pageview-status");
+  const badge = document.getElementById("pageview-badge");
+  const retry = document.getElementById("pageview-retry");
+  if (!status || !badge || !retry) return;
 
   document.documentElement.classList.add("js-enabled");
 
   // Preview visits must not contribute to the public site's count.
   if (window.location.hostname !== "zhaotaotao0215-lab.github.io") {
-    count.textContent = "发布后统计";
+    status.textContent = "发布后统计";
     return;
   }
 
-  let receivedCount = false;
-  const unavailable = () => {
-    if (!receivedCount) count.textContent = "暂不可用";
-  };
-  const timeout = window.setTimeout(unavailable, 8000);
-  const observer = new MutationObserver(() => {
-    if (!/^\d+$/.test(count.textContent.trim())) return;
-    receivedCount = true;
-    window.clearTimeout(timeout);
-    observer.disconnect();
-  });
-  observer.observe(count, { childList: true, characterData: true, subtree: true });
+  const endpoint = new URL("https://hitscounter.dev/api/hit");
+  endpoint.search = new URLSearchParams({
+    url: "https://zhaotaotao0215-lab.github.io/",
+    label: "Views",
+    icon: "github",
+    color: "#315d9d",
+    message: "",
+    style: "flat",
+    tz: "Asia/Shanghai",
+  }).toString();
 
-  const script = document.createElement("script");
-  script.src = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
-  script.async = true;
-  script.referrerPolicy = "origin";
-  script.addEventListener("error", unavailable, { once: true });
-  document.body.appendChild(script);
+  let timeout;
+  let loaded = false;
+  const unavailable = () => {
+    if (loaded) return;
+    window.clearTimeout(timeout);
+    status.hidden = false;
+    status.textContent = "计数服务暂不可用";
+    retry.hidden = false;
+  };
+
+  badge.addEventListener("load", () => {
+    if (!badge.naturalWidth) return unavailable();
+    loaded = true;
+    window.clearTimeout(timeout);
+    badge.hidden = false;
+    status.hidden = true;
+    retry.hidden = true;
+  });
+  badge.addEventListener("error", unavailable);
+
+  const load = () => {
+    loaded = false;
+    badge.hidden = true;
+    status.hidden = false;
+    status.textContent = "统计中";
+    retry.hidden = true;
+    window.clearTimeout(timeout);
+    timeout = window.setTimeout(unavailable, 15000);
+    // One image request per visit; never run a third-party counting script.
+    badge.removeAttribute("src");
+    badge.src = endpoint.href;
+  };
+
+  retry.addEventListener("click", load);
+  load();
 })();

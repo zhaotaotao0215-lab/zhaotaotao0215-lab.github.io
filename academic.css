@@ -279,13 +279,32 @@ footer p {
 
 .pageviews {
   display: flex;
-  align-items: baseline;
-  gap: 4px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
 }
 
-.pageviews span {
-  min-width: 7ch;
-  font-variant-numeric: tabular-nums;
+.pageview-value {
+  display: inline-flex;
+  align-items: center;
+  min-width: 112px;
+  min-height: 20px;
+}
+
+#pageview-badge {
+  max-width: 100%;
+  height: 20px;
+}
+
+.pageview-retry {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
 }
 
 html:not(.js-enabled) .pageviews {

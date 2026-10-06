@@ -46,8 +46,7 @@ https://zhaotaotao0215-lab.github.io/research/
 ├── llms.txt          # 面向检索工具的站点索引
 ├── llms-full.txt     # 机器可读的研究成果摘要
 ├── robots.txt        # 搜索引擎抓取规则
-├── sitemap.xml       # 公开页面站点地图
-└── nm/               # 课程/专题页面子目录
+└── sitemap.xml       # 公开页面站点地图
 ```
 
 ## 本地预览
@@ -77,8 +76,11 @@ http://127.0.0.1:8765/
 
 ## 浏览量与搜索展示
 
-- 页脚浏览量使用[不蒜子](https://busuanzi.ibruce.info/)的站点 PV 计数，目前仅主页接入。它统计浏览次数，不代表独立访客、论文阅读量或引用次数，也不会补算接入前的历史访问。
-- `pageviews.js` 只在 `zhaotaotao0215-lab.github.io` 加载计数服务；本地、文件和预览页面不计数。服务失败或超过 8 秒未返回数字时显示“暂不可用”，不填造数据。
+- 页脚使用 [Hits Counter](https://hitscounter.dev/) 的实时计数图片，按“今日 / 累计”显示；今日以 Asia/Shanghai 时区计算。目前仅主页接入，固定使用主页规范网址作为计数标识，不按查询参数或章节拆分。
+- 新服务从 2026-10-06 接入时开始计数，包含部署测试访问，不补算或编造旧服务和历史数据。图片请求次数不是独立访客、论文阅读量或引用次数；浏览器缓存、拦截器、机器人和直接访问图片可能影响统计。
+- `pageviews.js` 只在 `zhaotaotao0215-lab.github.io` 加载计数图片；本地、文件和预览页面不计数。不加载第三方 JavaScript，也不读取浏览器存储生成假计数。计数请求会向服务提供方发送主页公开网址及正常网络请求信息；图片使用 `no-referrer`。
+- 服务失败或超过 15 秒未加载时提供“重试”，迟到的成功响应仍可显示计数。不自动反复请求刷量。第三方免费服务不提供永久可用性保证；更换服务时应如实标注新的统计起点。
+- 已移除与学术主页无关的 `nm/` 课程作品集，内容可从 Git 历史恢复；保留照片、论文详情、引用文件与检索验证文件。
 - 网页标题、搜索摘要、分享标题和站点名称统一为学术主页信息， favicon 为 TZ 字母标识。旧版故事文字已经不在当前页面中。
 - 搜索引擎决定最终展示的标题和摘要；发布后仍需等待重新抓取。可在 Google Search Console 使用网址检查请求重新编入索引，不能保证立即刷新或固定展示文字。参考 [Google 标题链接说明](https://developers.google.com/search/docs/appearance/title-link?hl=zh-cn)与[摘要说明](https://developers.google.com/search/docs/appearance/snippet?hl=zh-cn)。
 
