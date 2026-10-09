@@ -16,10 +16,10 @@ https://zhaotaotao0215-lab.github.io/
 
 ## 研究成果
 
-学术索引页：
+主页论文列表：
 
 ```text
-https://zhaotaotao0215-lab.github.io/research/
+https://zhaotaotao0215-lab.github.io/#publications
 ```
 
 目前收录三篇英文论文，每篇都有独立页面、DOI、出版社链接、中英文检索摘要、规范主题词以及 BibTeX、RIS 和 JSON 引用数据：
@@ -41,7 +41,7 @@ https://zhaotaotao0215-lab.github.io/research/
 ├── academic.css      # 学术主页排版与响应式样式
 ├── pageviews.js      # 公开主页浏览量与失败状态处理
 ├── assets/           # 个人头像
-├── research/         # 可索引的学术主页、主题索引、论文详情与引用文件
+├── research/         # 主题索引、论文详情与引用文件；旧索引页跳转回主页
 ├── publications.bib  # 全部论文的 BibTeX 数据
 ├── llms.txt          # 面向检索工具的站点索引
 ├── llms-full.txt     # 机器可读的研究成果摘要

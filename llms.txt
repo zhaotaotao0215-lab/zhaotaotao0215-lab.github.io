@@ -12,7 +12,7 @@
 - Current research interest: pursuit-evasion games (追逃博弈)
 - ORCID: https://orcid.org/0009-0008-2184-6554
 - OpenAlex author: https://openalex.org/A5139276062
-- Research index: https://zhaotaotao0215-lab.github.io/research/
+- Publications: https://zhaotaotao0215-lab.github.io/#publications
 - Topic and keyword index: https://zhaotaotao0215-lab.github.io/research/topics/
 - Citation center: https://zhaotaotao0215-lab.github.io/research/citations/
 - Machine-readable metadata: https://zhaotaotao0215-lab.github.io/research/publications.json
