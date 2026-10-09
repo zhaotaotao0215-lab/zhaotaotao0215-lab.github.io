@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "lastVerified": "2026-09-13",
-  "lastUpdated": "2026-10-06",
+  "lastUpdated": "2026-10-09",
   "author": {
     "name": "Taotao Zhao",
     "alternateName": "赵涛涛",
@@ -25,7 +25,13 @@
       "authors": ["Taotao Zhao", "Z J Ji"],
       "journal": "Measurement Science and Technology",
       "publisher": "IOP Publishing",
-      "publishedOnline": "2026-09-01",
+      "volume": "37",
+      "issue": "39",
+      "articleNumber": "395101",
+      "publishedOnline": "2026-09-28",
+      "publicationDate": "2026-10-02",
+      "bibliographyChecked": "2026-10-09",
+      "bibliographySource": "https://api.crossref.org/works/10.1088/1361-6501/aea0f5",
       "doi": "10.1088/1361-6501/aea0f5",
       "doiUrl": "https://doi.org/10.1088/1361-6501/aea0f5",
       "publisherUrl": "https://iopscience.iop.org/article/10.1088/1361-6501/aea0f5",
@@ -46,7 +52,7 @@
         "file-level data leakage control"
       ],
       "keywordsZh": ["数字孪生", "感应电机故障诊断", "合成到真实迁移", "振动状态监测", "少样本校准"],
-      "citationText": "T. Zhao and Z. J. Ji, ‘Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis,’ Measurement Science and Technology, 2026, doi: 10.1088/1361-6501/aea0f5."
+      "citationText": "T. Zhao and Z. J. Ji, ‘Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis,’ Measurement Science and Technology, vol. 37, no. 39, art. 395101, 2026, doi: 10.1088/1361-6501/aea0f5."
     },
     {
       "type": "journal-article",

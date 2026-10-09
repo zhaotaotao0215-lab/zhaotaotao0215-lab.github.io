@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://zhaotaotao0215-lab.github.io/research/</id>
   <title>Taotao Zhao Research Publications</title>
-  <updated>2026-10-06T00:00:00+08:00</updated>
+  <updated>2026-10-09T00:00:00+08:00</updated>
   <link rel="self" href="https://zhaotaotao0215-lab.github.io/research/feed.xml" />
   <link rel="alternate" href="https://zhaotaotao0215-lab.github.io/research/" />
   <author>
@@ -12,8 +12,8 @@
   <entry>
     <id>https://doi.org/10.1088/1361-6501/aea0f5</id>
     <title>Auditing digital-twin acceleration measurements for synthetic-to-real induction motor fault diagnosis</title>
-    <published>2026-09-01T00:00:00+08:00</published>
-    <updated>2026-09-13T00:00:00+08:00</updated>
+    <published>2026-09-28T00:00:00+08:00</published>
+    <updated>2026-10-09T00:00:00+08:00</updated>
     <link rel="alternate" href="https://zhaotaotao0215-lab.github.io/research/digital-twin-induction-motor-fault-diagnosis/" />
     <link rel="related" href="https://doi.org/10.1088/1361-6501/aea0f5" />
     <category term="digital twin" />
